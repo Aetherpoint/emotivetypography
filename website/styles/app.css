@@ -1,0 +1,124 @@
+@charset="utf-8";
+
+html[dir=ltr] {
+	text-align: right;
+}
+* {
+	vertical-align: baseline;
+	font-feature-settings: "kern" 1;
+	font-variant-ligatures: no-common-ligatures;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Fonts */
+/*@font-face {
+	font-family: "Calibre-Bold";
+	src: url('../fonts/CalibreWeb-Bold.woff') format("woff"), 
+	url('../fonts/CalibreWeb-Bold.woff2') format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}*/
+
+html {
+	background-color: #FDFDFD;
+	height: 100%;
+}
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #33eaaa;
+	cursor: pointer;
+}
+a:active, a:focus, a:hover {
+	color: #16a774;
+}
+
+.container {
+	display: flex;
+	height: 100%;
+}
+
+section {
+	height: 100%;
+}
+
+/* Section One */
+section.left {
+	flex: 2 50%;
+	background-color: #262626;
+	color: #FEFEFE;
+}
+section.left h1 {
+	font-family: 'Output Sans';
+	font-size: 1.2rem;
+	letter-spacing: 0.02rem;
+	margin: 0;
+}
+section.left p {
+	font-family: 'Output Sans';
+	font-size: 1rem;
+	line-height: 1.6;
+	margin: 0.8rem 0 0 0;
+}
+section.left .subsection {
+	padding: 7.5%;
+	border-bottom: #333333 solid 1px;
+}
+section.left .button {
+	font-family: 'Output Sans';
+	font-size: 0.9;
+	background-color: #FEFEFE;
+	padding: 0.7rem 1.4rem;
+	display: inline-block;
+	color: #262626;
+	border-radius: 1px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+section.left .button-inline {
+	margin-top: 1rem;
+}
+section.left .button:hover {
+	background-color: #585858;
+	color: #FEFEFE;
+}
+
+.subsection-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.button-left {
+	align-self: flex-start;
+}
+.button-right {
+	align-self: flex-end;
+}
+
+
+.pad {
+	max-height: 20vw;
+	max-width: 20vw;
+
+	width: 100%;
+	height: 20rem;
+	background-color: #FEFEFE;
+	margin: 0 auto;
+}
+
+
+/* Section Left */
+section.right {
+	flex: 2 50%;
+}
+section.right .subsection {
+	background-color: papayawhip;
+	height: 90%;
+	margin: 5%;
+}
