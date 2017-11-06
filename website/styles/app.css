@@ -30,6 +30,11 @@ body {
 	height: 100%;
 }
 
+#slide-container {
+	height: 100%;
+	display: flex;
+}
+
 a:link, a:visited {
 	text-decoration: none;
 	color: #33eaaa;
@@ -101,7 +106,6 @@ section.left .button:hover {
 	align-self: flex-end;
 }
 
-
 .pad {
 	max-height: 20vw;
 	max-width: 20vw;
@@ -112,7 +116,6 @@ section.left .button:hover {
 	margin: 0 auto;
 }
 
-
 /* Section Left */
 section.right {
 	flex: 2 50%;
@@ -122,3 +125,11 @@ section.right .subsection {
 	height: 90%;
 	margin: 5%;
 }
+
+/* Slides */
+.container {
+	display: none;
+}
+/*#slide1.container {
+	display: flex;
+}*/
