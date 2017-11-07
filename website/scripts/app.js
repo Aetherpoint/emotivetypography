@@ -25,6 +25,8 @@ function populatePadLocations() {
 }
 function pushPadLocUpdate(locX, locY) {
 	padLocations[currentSlide] = { "locX" : locX, "locY" : locY };
+
+	// This just stores locations, not values in the matrix, which is what we really need.
 }
 
 function manageSlideState() {
@@ -33,11 +35,15 @@ function manageSlideState() {
 
 function advanceSlide() {
 	currentSlide++;
-	updateSlides();
+	renderSlideUpdate();
+
+	updateStorageState();
 }
 function backupSlide() {
 	currentSlide--;
-	updateSlides();
+	renderSlideUpdate();
+
+	updateStorageState();
 }
 
 
@@ -54,7 +60,7 @@ function showSlide(slideElement) {
 }
 
 // Update the slides
-function updateSlides() {
+function renderSlideUpdate() {
 
 	for (var i = 0; i < slides.length; i++) {
 		
@@ -185,10 +191,8 @@ function initPadMarker () {
 	  });
 }
 
-
-
 prepSlides();
-updateSlides();
+renderSlideUpdate();
 
 initPad();
 initPadMarker();

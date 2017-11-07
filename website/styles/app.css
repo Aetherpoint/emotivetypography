@@ -260,16 +260,16 @@ section.left .button:hover {
 }
 .label-horizontal .x1 {
 	top: 50%;
-	left: 100%;
+	right: 100%;
 	position: absolute;
-	margin-left: 0.9rem;
+	margin-right: 0.9rem;
 	margin-top: -0.4rem;
 }
 .label-horizontal .x2 {
 	top: 50%;
-	right: 100%;
+	left: 100%;
 	position: absolute;
-	margin-right: 0.9rem;
+	margin-left: 0.9rem;
 	margin-top: -0.4rem;
 }
 

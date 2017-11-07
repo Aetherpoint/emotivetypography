@@ -53,22 +53,40 @@ function key(n) {
   }
 }
 
+/* Generate a unique ID */
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
 
 console.log(isSupported(storage));
 
+function setStorage() {
+  // Check for local storate
+  if (isSupported(storage)) {
 
-// Check for local storate
-if (isSupported(storage)) {
+    // If we've already visited and set a unique ID
+    if (getItem("userID")) {
+      // Then we don't have to set any new items.
+      console.log("Pre-existing user is " + getItem("userID"));
+    }
+    else {
 
-  // Visited
+      var newUser = uuidv4();
 
+      // Otherwise, set up initial the items
+      setItem("currentSlide", currentSlide);
+      setItem("padLocations", padLocations);
+      setItem("userID", newUser);
 
-  // Set up initial items
-  setItem("currentSlide", currentSlide);
-  setItem("padLocations", padLocations);
-
+      console.log("Registering a new user as " + newUser);
+    }
+  }
 }
 
+setStorage();
 
 // Update state
 function updateStorageState() {
