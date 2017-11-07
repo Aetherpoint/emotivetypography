@@ -1,5 +1,31 @@
 
+
+/* Elements */
+var sliderComponent = document.getElementById('slide-container');
+var slides = sliderComponent.querySelectorAll("#slide-container > div");
+
+/* Data */
 var currentSlide = 1;
+var padLocations = [];
+
+// Make a place to save data for each pad location
+function populatePadLocations() {
+	for (var i = 0; i < slides.length; i++) {
+		
+		// If there's a pad on that slide then add that information.
+		if (slides[i].querySelectorAll('.pad')[0]) {
+			padLocations.push([
+				{
+					"locX" : 0, 
+					"locY" : 0 
+				}
+			]);
+		}
+	}
+}
+function pushPadLocUpdate(locX, locY) {
+	padLocations[currentSlide] = { "locX" : locX, "locY" : locY };
+}
 
 function manageSlideState() {
 
@@ -29,8 +55,6 @@ function showSlide(slideElement) {
 
 // Update the slides
 function updateSlides() {
-	var sliderComponent = document.getElementById('slide-container');
-	var slides = sliderComponent.querySelectorAll("#slide-container > div");
 
 	for (var i = 0; i < slides.length; i++) {
 		
@@ -46,6 +70,8 @@ function updateSlides() {
 			// console.log(slides[i]);
 		}
 	}
+
+	// updateStorageState();
 }
 
 
@@ -95,7 +121,6 @@ var padHeight = 0;
 
 function initPad() {
 	var pads = document.getElementsByClassName('pad');
-
 
 	padWidth = pads[0].getBoundingClientRect().width;
 	padHeight = pads[0].getBoundingClientRect().height;
@@ -152,6 +177,8 @@ function initPadMarker () {
 	    x += event.dx;
 	    y += event.dy;
 
+	    pushPadLocUpdate(x, y);
+
 	    event.target.style.webkitTransform =
 	    event.target.style.transform =
 	        'translate(' + x + 'px, ' + y + 'px)';
@@ -165,6 +192,8 @@ updateSlides();
 
 initPad();
 initPadMarker();
+
+populatePadLocations();
 
 
 // Utility Functions

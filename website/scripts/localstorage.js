@@ -3,7 +3,6 @@ let inMemoryStorage = {};
 
 var storage = window.localStorage;
 
-
 function isSupported(storage) {
   try {
     const key = "__some_random_key_you_are_not_going_to_use__";
@@ -61,7 +60,20 @@ console.log(isSupported(storage));
 // Check for local storate
 if (isSupported(storage)) {
 
+  // Visited
+
+
   // Set up initial items
   setItem("currentSlide", currentSlide);
+  setItem("padLocations", padLocations);
 
+}
+
+
+// Update state
+function updateStorageState() {
+
+  // Set up initial items
+  setItem("currentSlide", currentSlide);
+  setItem("padLocations", padLocations);
 }
