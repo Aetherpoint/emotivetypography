@@ -58,7 +58,7 @@ function prepSlides() {
 
 	for (var i = 0; i < slides.length; i++) {
 
-		console.log(i);
+		// console.log(i);
 		
 		// Attack event listeners to the slide buttons
 
@@ -66,7 +66,7 @@ function prepSlides() {
 		if (slides[i].querySelectorAll('.button-left')[0]) {
 			// slides[i].querySelectorAll('.button-left')
 
-			console.log(slides[i].querySelectorAll('.button-left')[0]);
+			// console.log(slides[i].querySelectorAll('.button-left')[0]);
 
 			slides[i].querySelectorAll('.button-left')[0].addEventListener("click", function(event) {
 			    
@@ -76,7 +76,7 @@ function prepSlides() {
 		}
 		if (slides[i].querySelectorAll('.button-right')[0]) {
 
-			console.log(slides[i].querySelectorAll('.button-right')[0]);
+			// console.log(slides[i].querySelectorAll('.button-right')[0]);
 
 			slides[i].querySelectorAll('.button-right')[0].addEventListener("click", function(event) {
 			    
@@ -100,7 +100,7 @@ function initPad() {
 	padWidth = pads[0].getBoundingClientRect().width;
 	padHeight = pads[0].getBoundingClientRect().height;
 
-	console.log(padWidth, padHeight);
+	// console.log(padWidth, padHeight);
 }
 
 
@@ -108,10 +108,14 @@ function dividePadGrid(axis) {
 
 	if ((padWidth !== 0) || (padWidth !== 0)) {
 		if (axis === "x") {
-			return padWidth / 10;
+
+			console.log(roundTo((padWidth / 10), 2));
+			return roundTo((padWidth / 10), 2);
 		}
 		else if (axis === "y") {
-			return padHeight / 10;
+
+			console.log(roundTo((padHeight / 10), 2));
+			return roundTo((padHeight / 10), 2);
 		}
 		else {
 			console.log("No axis provided for the pad, please pass an 'x' or a 'y'");
@@ -131,15 +135,16 @@ function initPadMarker () {
 	  .draggable({
 	    snap: {
 	      targets: [
-	        interact.createSnapGrid({ x: dividePadGrid("x"), y: dividePadGrid("y") })
+	        interact.createSnapGrid({ x: (dividePadGrid("x")), y: (dividePadGrid("y")) })
 	      ],
 	      range: Infinity,
-	      relativePoints: [ { x: 0, y: 0 } ]
+	      relativePoints: [ { x: 0, y: 0 } ],
+	      offset: { x: 0, y: 0 }
 	    },
 	    inertia: true,
 	    restrict: {
 	      restriction: element.parentNode,
-	      elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+	      elementRect: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 },
 	      endOnly: true
 	    }
 	  })
@@ -154,8 +159,57 @@ function initPadMarker () {
 }
 
 
+
 prepSlides();
 updateSlides();
 
 initPad();
 initPadMarker();
+
+
+// Utility Functions
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+var windowResized = debounce(function() {
+	// initPad();
+	// initPadMarker();
+}, 250);
+
+window.addEventListener('resize', windowResized);
+
+
+function roundTo(n, digits) {
+    var negative = false;
+    if (digits === undefined) {
+        digits = 0;
+    }
+        if( n < 0) {
+        negative = true;
+      n = n * -1;
+    }
+    var multiplicator = Math.pow(10, digits);
+    n = parseFloat((n * multiplicator).toFixed(11));
+    n = (Math.round(n) / multiplicator).toFixed(2);
+    if( negative ) {    
+        n = (n * -1).toFixed(2);
+    }
+    return n;
+}

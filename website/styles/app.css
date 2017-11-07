@@ -118,13 +118,20 @@ section.left .button:hover {
 	position: relative;
 }
 .marker {
-	width: 2rem;
-	height: 2rem;
-	background-color: #222;
+	width: 1rem;
+	height: 1rem;
+	/* margin: -1rem 0 0 -1rem; */
+	background-color: #363636;
+	background-color: red;
 	border-radius: 50%;
-	position: absolute;
+	/*position: absolute;*/
 	cursor: move;
-	box-shadow: 0px 0px 36px -6px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.7);
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+.marker:hover {
+	background-color: #010101;
+	box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.8);
 }
 
 .line {
@@ -135,6 +142,8 @@ section.left .button:hover {
 	height: 100%;
 	width: 1px;
 	position: absolute;
+	pointer-events: none;
+
 }
 .grid-vertical .line:nth-of-type(1) {
 	left: 0;
@@ -218,7 +227,7 @@ section.left .button:hover {
 .label-vertical {
 	font-family: 'Output Sans';
 	font-size: 0.8rem;
-	color: #FEFEFE;
+	color: #AAA;
 	pointer-events: none;
 	user-select: none;
 }
@@ -242,7 +251,7 @@ section.left .button:hover {
 .label-horizontal {
 	font-family: 'Output Sans';
 	font-size: 0.8rem;
-	color: #FEFEFE;
+	color: #AAA;
 	pointer-events: none;
 	user-select: none;
 }
