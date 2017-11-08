@@ -95,3 +95,15 @@ function updateStorageState() {
   setItem("currentSlide", currentSlide);
   setItem("padLocations", padLocations);
 }
+
+
+
+function getTimeStamp() {
+  if (!Date.now) {
+    Date.now = function now() {
+      return new Date().getTime();
+    };
+  }
+  
+  return Date.now();
+}

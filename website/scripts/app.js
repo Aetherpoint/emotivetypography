@@ -137,16 +137,17 @@ function initPad() {
 
 function dividePadGrid(axis) {
 
-	if ((padWidth !== 0) || (padWidth !== 0)) {
-		if (axis === "x") {
+	if ((padWidth > 0) && (padHeight > 0)) {
 
-			console.log(roundTo((padWidth / 10), 2));
-			return roundTo((padWidth / 10), 2);
+		console.log("Grid size: " + padWidth + ", " + padHeight);
+
+		if (axis === "x") {
+			console.log(((padWidth / 10)));
+			return ((padWidth / 10));
 		}
 		else if (axis === "y") {
-
-			console.log(roundTo((padHeight / 10), 2));
-			return roundTo((padHeight / 10), 2);
+			console.log(((padHeight / 10)));
+			return ((padHeight / 10));
 		}
 		else {
 			console.log("No axis provided for the pad, please pass an 'x' or a 'y'");
@@ -157,6 +158,20 @@ function dividePadGrid(axis) {
 	}
 }
 
+// Center the pad marker
+// function centerPadMarker () {
+// 	var element = document.getElementById('grid-snap'),
+// 	x = 0, y = 0;
+
+// 	x = (dividePadGrid("x") * 5);
+// 	y = (dividePadGrid("y") * 5);
+
+// 	element.style.webkitTransform =
+// 	element.style.transform =
+// 	'translate(' + x + 'px, ' + y + 'px)';
+
+// 	pushPadLocUpdate(x, y);
+// }
 
 function initPadMarker () {
 	var element = document.getElementById('grid-snap'),
@@ -166,13 +181,13 @@ function initPadMarker () {
 	  .draggable({
 	    snap: {
 	      targets: [
-	        interact.createSnapGrid({ x: (dividePadGrid("x")), y: (dividePadGrid("y")) })
+	        interact.createSnapGrid({ x: 30, y: 30 })
 	      ],
 	      range: Infinity,
 	      relativePoints: [ { x: 0, y: 0 } ],
-	      offset: { x: 0, y: 0 }
+	      offset: { x: 15, y: 7 }
 	    },
-	    inertia: true,
+	    inertia: false,
 	    restrict: {
 	      restriction: element.parentNode,
 	      elementRect: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 },
@@ -196,6 +211,7 @@ renderSlideUpdate();
 
 initPad();
 initPadMarker();
+// centerPadMarker();
 
 populatePadLocations();
 
