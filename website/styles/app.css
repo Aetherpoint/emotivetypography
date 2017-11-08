@@ -109,12 +109,18 @@ section.left .button:hover {
 	align-self: flex-end;
 }
 
+.pad-container {
+	margin: 0 auto;
+	padding: 15px;
+	height: 330px;
+	width: 330px;
+	border: solid red 1px;
+}
 .pad {
 	border-radius: 1px;
 	height: 300px;
 	width: 300px;
 	background-color: #FEFEFE;
-	margin: 0 auto;
 	position: relative;
 }
 .marker {

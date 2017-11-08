@@ -183,15 +183,19 @@ function initPadMarker () {
 	      targets: [
 	        interact.createSnapGrid({ x: 30, y: 30 })
 	      ],
-	      range: 30,
-	      relativePoints: [ { x: 0, y: 0 } ],
-	      offset: { x: 15, y: 12 } /* Why does this seem to change */
+	      range: Infinity,
+	      // relativePoints: [{ x: 0, y: 0 }]
+	     	relativePoints: [
+		      { x: 1, y: 1 }
+		    ]
+
+	      // offset: { x: 15, y: 12 } /* Why does this seem to change */
 	    },
 	    inertia: false,
 	    restrict: {
-	      restriction: element.parentNode,
-	      elementRect: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 },
-	      endOnly: true
+	      restriction: '.pad',
+	      elementRect: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 }
+	      // endOnly: true
 	    }
 	  })
 	  .on('dragmove', function (event) {
