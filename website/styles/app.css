@@ -72,8 +72,11 @@ section.left p {
 	margin: 0 0 0.8rem 0;
 }
 section.left .subsection {
-	padding: 7.5%;
+	padding: 5%;
 	border-bottom: #333333 solid 1px;
+}
+section.left .subsection-middle {
+	padding: 12.5% 7.5%;
 }
 section.left .button {
 	font-family: 'Output Sans';
@@ -107,17 +110,11 @@ section.left .button:hover {
 }
 
 .pad {
-	/*max-height: 20vw;
-	max-width: 20vw;*/
-
+	border-radius: 1px;
 	height: 300px;
 	width: 300px;
-
-	/*width: 100%;
-	height: 20rem;*/
 	background-color: #FEFEFE;
 	margin: 0 auto;
-
 	position: relative;
 }
 .marker {
@@ -233,8 +230,10 @@ section.left .button:hover {
 
 .label-vertical {
 	font-family: 'Output Sans';
+	font-weight: 600;
+	/*text-transform: uppercase;*/
 	font-size: 0.8rem;
-	color: #DDD;
+	color: #EEE;
 	pointer-events: none;
 	user-select: none;
 }
@@ -257,8 +256,10 @@ section.left .button:hover {
 
 .label-horizontal {
 	font-family: 'Output Sans';
+	font-weight: 600;
+	/*text-transform: uppercase;*/
 	font-size: 0.8rem;
-	color: #DDD;
+	color: #EEE;
 	pointer-events: none;
 	user-select: none;
 }

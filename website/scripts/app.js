@@ -183,9 +183,9 @@ function initPadMarker () {
 	      targets: [
 	        interact.createSnapGrid({ x: 30, y: 30 })
 	      ],
-	      range: Infinity,
+	      range: 30,
 	      relativePoints: [ { x: 0, y: 0 } ],
-	      offset: { x: 22, y: 7 } /* Why does this seem to change */
+	      offset: { x: 15, y: 12 } /* Why does this seem to change */
 	    },
 	    inertia: false,
 	    restrict: {
@@ -195,8 +195,10 @@ function initPadMarker () {
 	    }
 	  })
 	  .on('dragmove', function (event) {
-	    x += event.dx;
-	    y += event.dy;
+	    x += roundTo(event.dx, 0);
+	    y += roundTo(event.dy, 0);
+
+	    console.log(x, y);
 
 	    pushPadLocUpdate(x, y);
 
@@ -245,20 +247,6 @@ var windowResized = debounce(function() {
 window.addEventListener('resize', windowResized);
 
 
-function roundTo(n, digits) {
-    var negative = false;
-    if (digits === undefined) {
-        digits = 0;
-    }
-        if( n < 0) {
-        negative = true;
-      n = n * -1;
-    }
-    var multiplicator = Math.pow(10, digits);
-    n = parseFloat((n * multiplicator).toFixed(11));
-    n = (Math.round(n) / multiplicator).toFixed(2);
-    if( negative ) {    
-        n = (n * -1).toFixed(2);
-    }
-    return n;
+function roundTo(value, decimals) {
+  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
