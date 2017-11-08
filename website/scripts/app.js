@@ -185,7 +185,7 @@ function initPadMarker () {
 	      ],
 	      range: Infinity,
 	      relativePoints: [ { x: 0, y: 0 } ],
-	      offset: { x: 15, y: 7 }
+	      offset: { x: 22, y: 7 } /* Why does this seem to change */
 	    },
 	    inertia: false,
 	    restrict: {
