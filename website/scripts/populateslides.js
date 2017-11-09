@@ -44,7 +44,7 @@ function addImageSlides (slideData) {
     var currentHTMLString = `<div id='slide` + (indexNum + slideStartingIndex) + `' class='container img-` + (i) + `'>` +
       `<section class='left'>
         <div class='subsection'>
-          <h1>Image ` + (i) + `</h1>
+          <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
           <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
         </div>
 
