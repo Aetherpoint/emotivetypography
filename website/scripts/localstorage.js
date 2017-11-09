@@ -61,7 +61,6 @@ function uuidv4() {
   });
 }
 
-console.log(isSupported(storage));
 
 function setStorage() {
   // Check for local storate
@@ -97,6 +96,21 @@ function updateStorageState() {
 }
 
 
+
+function primeSubmit() {
+  var prelimSlide = document.getElementsByClassName('button-submit');
+
+  if (prelimSlide[0]) {
+    prelimSlide[0].addEventListener("click", function(event) {
+      submitResults();
+    });
+  }
+
+}
+
+function submitResults() {
+  console.log('submitting results');
+}
 
 function getTimeStamp() {
   if (!Date.now) {

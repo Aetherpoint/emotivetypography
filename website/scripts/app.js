@@ -177,40 +177,51 @@ function initPadMarker () {
 	var element = document.getElementById('grid-snap'),
     x = 0, y = 0;
 
+
 	interact(element)
 	  .draggable({
 	    snap: {
-	      targets: [
-	        interact.createSnapGrid({ x: 30, y: 30 })
-	      ],
-	      range: Infinity,
-	      // relativePoints: [{ x: 0, y: 0 }]
-	     	relativePoints: [
-		      { x: 1, y: 1 }
-		    ]
+	    	// edges: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 },
+	      	targets: [
+		        interact.createSnapGrid({ 
+		        	x: 30, 
+		        	y: 30,
+		        })
+		    ],
+	      	relativePoints: [
+            	{ x: 0, y: 0 }
+            ]
 
-	      // offset: { x: 15, y: 12 } /* Why does this seem to change */
+	      	// offset: { x: 15, y: 15 } /* Why does this seem to change */ 
 	    },
-	    inertia: false,
-	    restrict: {
-	      restriction: '.pad',
-	      elementRect: { top: 0.5, left: 0.5, bottom: 0.5, right: 0.5 }
-	      // endOnly: true
-	    }
+		restrict: {
+            restriction: {
+			    x: parent.offset().left,
+			    y: parent.offset().top + 1,
+			    width: parent.width(),
+			    height: parent.height()
+			},
+            elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+        }
 	  })
 	  .on('dragmove', function (event) {
-	    x += roundTo(event.dx, 0);
-	    y += roundTo(event.dy, 0);
+        var target = event.target,
+        
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-	    console.log(x, y);
+        // translate the element
+        target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px,' + y + 'px)';
 
-	    pushPadLocUpdate(x, y);
-
-	    event.target.style.webkitTransform =
-	    event.target.style.transform =
-	        'translate(' + x + 'px, ' + y + 'px)';
-	  });
+        // update the posiion attributes
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+    });
 }
+
 
 prepSlides();
 renderSlideUpdate();

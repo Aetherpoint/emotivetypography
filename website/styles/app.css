@@ -111,10 +111,10 @@ section.left .button:hover {
 
 .pad-container {
 	margin: 0 auto;
-	padding: 15px;
-	height: 330px;
-	width: 330px;
-	border: solid red 1px;
+/*	padding: 15px;*/
+	height: 300px;
+	width: 300px;
+/*	border: solid red 1px;*/
 }
 .pad {
 	border-radius: 1px;
@@ -123,20 +123,31 @@ section.left .button:hover {
 	background-color: #FEFEFE;
 	position: relative;
 }
-.marker {
-	width: 30px;
-	height: 30px;
-	margin: -15px 0 0 -15px; 
-	background-color: rgba(88,88,88,0.8);
-	border: solid #FEFEFE 3px;
-	border-radius: 100%;
+/*#grid-snap {
+	height: 3px;
+	width: 3px;
+	margin: -1px 0 0 -1px;
 	z-index: 2000;
-	position: absolute;
+	background-color: red;
 	top: 50%;
 	left: 50%;
-	cursor: move;
+	position: absolute;
+}*/
+.marker {
+/*	display: none;*/
+	width: 30px;
+	height: 30px;
+/*	margin: -15px 0 0 -15px; */
+	background-color: rgba(88,88,88,0.8);
+	border: solid #FEFEFE 3px;
+/*	border-radius: 100%;*/
+	z-index: 2000;
+	position: absolute;
+/*	top: 50%;
+	left: 50%;*/
+/*	cursor: move;
 	box-shadow: 0px 0px 35px -4px rgba(0,0,0,0.8); 
-	transition: background-color 0.25s, box-shadow 0.25s;
+	transition: background-color 0.25s, box-shadow 0.25s;*/
 }
 .marker:hover {
 	background-color: rgba(0,0,0,0.9);
@@ -147,6 +158,10 @@ section.left .button:hover {
 	background-color: #EEE;
 }
 
+.grid-vertical {
+	user-select: none;
+	pointer-events: none;
+}
 .grid-vertical .line {
 	height: 100%;
 	width: 1px;
@@ -190,6 +205,11 @@ section.left .button:hover {
 	opacity: 0;
 }
 
+
+.grid-horizontal {
+	user-select: none;
+	pointer-events: none;
+}
 
 .grid-horizontal .line {
 	width: 100%;
@@ -294,6 +314,8 @@ section.left .button:hover {
 	opacity: 0.55;
 	transition: opacity 0.3s;
 	z-index: 1000;
+	pointer-events: none;
+	user-select: none;
 }
 .sub-label:hover {
 /*	opacity: 0.7;*/
