@@ -8,6 +8,13 @@ var slides = sliderComponent.querySelectorAll("#slide-container > div");
 var currentSlide = 0;
 var padLocations = [];
 
+
+/* function */
+function userAlreadySubmitted () {
+	
+}
+
+
 // Make a place to save data for each pad location
 function populatePadLocations() {
 	for (var i = 0; i < slides.length; i++) {
@@ -175,6 +182,7 @@ function dividePadGrid(axis) {
 
 function initPadMarker () {
 	var element = document.getElementById('grid-snap'),
+
     x = 0, y = 0;
 
 
@@ -192,17 +200,17 @@ function initPadMarker () {
             	{ x: 0, y: 0 }
             ]
 
-	      	// offset: { x: 15, y: 15 } /* Why does this seem to change */ 
+	      	// offset: { x: 15, y: 15 }  Why does this seem to change  
 	    },
-		restrict: {
-            restriction: {
-			    x: parent.offset().left,
-			    y: parent.offset().top + 1,
-			    width: parent.width(),
-			    height: parent.height()
-			},
-            elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-        }
+		// restrict: {
+  //           restriction: {
+		// 	    x: parent.offsetLeft(),
+		// 	    y: parent.offsetTop() + 1,
+		// 	    width: parent.width(),
+		// 	    height: parent.height()
+		// 	},
+  //           elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+  //       }
 	  })
 	  .on('dragmove', function (event) {
         var target = event.target,

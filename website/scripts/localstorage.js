@@ -62,25 +62,43 @@ function uuidv4() {
 }
 
 
+var user = { 
+    "userID" : 0,
+    "userCompletedSurvey" : false
+  };
+
+
+var results = [
+  { 
+    "padLocations" : undefined,
+    "submittedTimeStamp" : undefined
+
+  }
+];
+
+
+
 function setStorage() {
   // Check for local storate
   if (isSupported(storage)) {
 
     // If we've already visited and set a unique ID
-    if (getItem("userID")) {
+    if (getItem("userID").userID !== 0) {
       // Then we don't have to set any new items.
       console.log("Pre-existing user is " + getItem("userID"));
     }
     else {
 
-      var newUser = uuidv4();
+      var newUserID = uuidv4();
+
 
       // Otherwise, set up initial the items
       setItem("currentSlide", currentSlide);
       setItem("padLocations", padLocations);
-      setItem("userID", newUser);
+      setItem("userInfo", newUserID);
 
-      console.log("Registering a new user as " + newUser);
+
+      console.log("Registering a new user as " + newUserID);
     }
   }
 }
