@@ -19,6 +19,26 @@ html[dir=ltr] {
 	font-weight: 400;
 	font-style: normal;
 }*/
+@font-face {
+	font-family: "Sole-Serif";
+	src: url('../fonts/sole-textlight-webfont.woff2') format('woff2'),
+         url('../fonts/sole-textlight-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+/*@font-face {
+	font-family: "Sole-Serif-Display";
+    src: url('../fonts/sole-displayblack-webfont.woff2') format('woff2'),
+         url('../fonts/sole-displayblack-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}*/
+@font-face {
+	font-family: "Output Sans";
+    src: url('../fonts/OutputSans-Light.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
 
 html {
 	background-color: #FDFDFD;
@@ -28,6 +48,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	height: 100%;
+	background-color: #222;
 }
 
 #slide-container {
@@ -62,15 +83,27 @@ section.left {
 section.left h1 {
 	font-family: 'Output Sans';
 	font-size: 1.2rem;
-	letter-spacing: 0.02rem;
-	margin: 0 0 0.8rem 0;
+	letter-spacing: 0.06rem;
+	margin: 0 0 0.6rem 0;
 }
 section.left p {
-	font-family: 'Output Sans';
-	font-size: 1rem;
+	font-family: 'Sole-Serif';
+	letter-spacing: 0.01rem;
+	font-size: 1.1rem;
 	line-height: 1.6;
-	margin: 0 0 0.8rem 0;
+	margin: 0 0 0 0;
 }
+
+section.left.intro .subsection {
+	padding: 10%;
+}
+section.left.intro h1 {
+	font-size: 1.9rem;
+}
+section.left.intro p {
+	font-size: 1.3rem;
+}
+
 section.left .subsection {
 	padding: 5%;
 	border-bottom: #333333 solid 1px;
@@ -80,17 +113,22 @@ section.left .subsection-middle {
 }
 section.left .button {
 	font-family: 'Output Sans';
-	font-size: 0.9;
+	font-size: 0.9rem;
 	background-color: #FEFEFE;
-	padding: 0.7rem 1.4rem;
+	padding: 0.65rem 1.4rem;
+	letter-spacing: 0.02rem;
 	display: inline-block;
 	color: #262626;
 	border-radius: 1px;
 	transition: all 0.2s;
 	cursor: pointer;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+section.left .button-start {
+	margin-top: 1.1rem;
 }
 section.left .button-inline {
-	margin-top: 1rem;
+	margin-top: 1.1rem;
 }
 section.left .button:hover {
 	background-color: #585858;
@@ -256,6 +294,7 @@ section.left .button:hover {
 
 .label-vertical {
 	font-family: 'Output Sans';
+	letter-spacing: 0.02rem;
 	font-weight: 600;
 	/*text-transform: uppercase;*/
 	font-size: 0.8rem;
@@ -282,6 +321,7 @@ section.left .button:hover {
 
 .label-horizontal {
 	font-family: 'Output Sans';
+	letter-spacing: 0.02rem;
 	font-weight: 600;
 	/*text-transform: uppercase;*/
 	font-size: 0.8rem;
@@ -362,16 +402,17 @@ section.left .button:hover {
 	flex: 2 50%;
 	/* display: inline-block; */
 	font-family: 'Output Sans';
-	font-size: 0.65rem;
-	letter-spacing: 0;
+	font-size: 0.6rem;
+	letter-spacing: 0.03rem;
 	color: #FEFEFE;
 	z-index: 1000;
+	-webkit-font-smoothing: subpixel-antialiased;
 	user-select: none;
 	pointer-events: none;
 }
 .sub-label .row div > span {
 	background-color: #262626;
-	padding: 0.15rem 0.3rem 0.2rem 0.3rem;
+	padding: 0.18rem 0.3rem 0.18rem 0.3rem;
 	display: inline-block;
 	border-radius: 1px;
 }
@@ -383,12 +424,30 @@ section.left .button:hover {
 /* Section Left */
 section.right {
 	flex: 2 50%;
+	background-color: #FEFEFE;
 }
 section.right .subsection {
 	background-color: papayawhip;
 	height: 90%;
 	margin: 5%;
 }
+
+section.right .subsection.dimmed {
+	background-color: #222;
+	margin: 0;
+	height: 100%;
+}
+
+section.right.intro {
+	background-color: #222;
+}
+section.right.intro .subsection.dimmed {
+	border: solid #999 2px;
+	height: 90%;
+	margin: 5%;
+}
+
+
 
 /* Slides */
 .container {

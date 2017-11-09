@@ -5,7 +5,7 @@ var sliderComponent = document.getElementById('slide-container');
 var slides = sliderComponent.querySelectorAll("#slide-container > div");
 
 /* Data */
-var currentSlide = 1;
+var currentSlide = 0;
 var padLocations = [];
 
 // Make a place to save data for each pad location

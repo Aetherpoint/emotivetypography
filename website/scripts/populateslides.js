@@ -27,17 +27,25 @@ var slideData = [
   }
 ];
 
+var slideHTMLGroup = [];
+
 
 addImageSlides(slideData);
 
 function addImageSlides (slideData) {
 	var prelimSlide = document.getElementsByClassName('preliminary-slide');
+  const slideStartingIndex = 2;
 
-	var slideHTML = `<div id='slide3'` + `class='container img-1'>
-      <section class='left'>
+
+  for (var i = 0; i <= slideData.length; i++) {
+
+    var indexNum = i;
+
+    var currentHTMLString = `<div id='slide` + (indexNum + slideStartingIndex) + `' class='container img-` + (i) + `'>` +
+      `<section class='left'>
         <div class='subsection'>
-          <h1>Image 1</h1>
-          <p>Look at the image on the right. How does it make you feel? Drag the marker closest to what you feel.</p>
+          <h1>Image ` + (i) + `</h1>
+          <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
         </div>
 
         <div class='subsection subsection-middle'>
@@ -141,7 +149,10 @@ function addImageSlides (slideData) {
 
         </div>
       </section>
-    </div>`;
+    </div>`
+
+    slideHTMLGroup.push(currentHTMLString);
+  }
 
 
 	if (prelimSlide[0]) {
@@ -150,7 +161,7 @@ function addImageSlides (slideData) {
 
 			console.log("Adding slide");
 
-			prelimSlide[0].insertAdjacentHTML('afterend', slideHTML);
+			prelimSlide[0].insertAdjacentHTML('afterend', slideHTMLGroup[i]);
 		}
 	}
 	else {
