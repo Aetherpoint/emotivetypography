@@ -128,25 +128,21 @@ function primeSubmit() {
 
 function submitResults() {
 
-  var $form = $('form#test-form'),
-      url = 'https://script.google.com/macros/u/0/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec'
+  var $form = $('form#test-form');
+  var url = 'https://script.google.com/macros/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec';
 
   $('#submit-form').on('click', function(e) {
 
     console.log("Submitting form");
 
     e.preventDefault();
+
     var jqxhr = $.ajax({
       url: url,
       method: "GET",
       dataType: "json",
       data: $form.serializeObject()
-    }).success(
-      
-      // do something
-      // console.log('submitted!')
-
-    );
+    });
   })
 
 }
