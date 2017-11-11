@@ -77,7 +77,6 @@ var results = [
 ];
 
 
-
 function setStorage() {
   // Check for local storate
   if (isSupported(storage)) {
@@ -126,9 +125,33 @@ function primeSubmit() {
 
 }
 
+
 function submitResults() {
-  console.log('submitting results');
+
+  var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/u/0/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec'
+
+  $('#submit-form').on('click', function(e) {
+
+    console.log("Submitting form");
+
+    e.preventDefault();
+    var jqxhr = $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "json",
+      data: $form.serializeObject()
+    }).success(
+      
+      // do something
+      // console.log('submitted!')
+
+    );
+  })
+
 }
+
+submitResults();
 
 function getTimeStamp() {
   if (!Date.now) {
@@ -139,3 +162,10 @@ function getTimeStamp() {
   
   return Date.now();
 }
+
+
+
+
+
+
+// https://script.google.com/macros/u/0/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec

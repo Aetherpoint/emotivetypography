@@ -5,13 +5,13 @@ var sliderComponent = document.getElementById('slide-container');
 var slides = sliderComponent.querySelectorAll("#slide-container > div");
 
 /* Data */
-var currentSlide = 0;
+var currentSlide = 1;
 var padLocations = [];
 
 
 /* function */
 function userAlreadySubmitted () {
-	
+
 }
 
 
@@ -185,7 +185,6 @@ function initPadMarker () {
 
     x = 0, y = 0;
 
-
 	interact(element)
 	  .draggable({
 	    snap: {
@@ -202,6 +201,10 @@ function initPadMarker () {
 
 	      	// offset: { x: 15, y: 15 }  Why does this seem to change  
 	    },
+	    restrict: {
+            restriction: 'parent',
+            elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+        },
 		// restrict: {
   //           restriction: {
 		// 	    x: parent.offsetLeft(),
@@ -213,11 +216,71 @@ function initPadMarker () {
   //       }
 	  })
 	  .on('dragmove', function (event) {
-        var target = event.target,
+        var target = event.target;
+
+        // Lock event locations to locations
+        var shiftX = event.dx;
+        var shiftY = event.dy;
+
+        // console.log(shiftY);
+        // console.log(shiftX);
+
+        // if (shiftX === 0) {
+        // 	shiftX = 0;
+        // }
+        // else if ((shiftX > 0) || (shiftX > 30)) {
+        // 	shiftX = 30;
+        // }
+        // else if ((shiftX < -14) || (shiftX > -30)) {
+        // 	shiftX = -30;
+        // }
+
+        // if (shiftY === 0) {
+        // 	shiftY = 0;
+        // }
+        // else if ((shiftY > 14) || (shiftY > 30)) {
+        // 	shiftY = 30;
+        // }
+        // else if ((shiftY < -14) || (shiftY > -30)) {
+        // 	shiftY = -30;
+        // }
+
+        // console.log(shiftX);
+        // console.log(shiftY);
+
+        // console.log((parseFloat(target.getAttribute('data-x')) || 0));
+        // console.log((parseFloat(target.getAttribute('data-y')) || 0));
+
+        var totalLocX = parseFloat(target.getAttribute('data-x') || 0);
+        var totalLocY = parseFloat(target.getAttribute('data-y') || 0);
+
+
+        // if (totalLocX > 120) {
+        // 	totalLocX = 120;
+        // }
+        // else if (totalLocX < -120) {
+        // 	totalLocX = -120;
+        // }
+
+        // if (totalLocY > 120) {
+        // 	totalLocY = 120;
+        // }
+        // else if (totalLocY < -120) {
+        // 	totalLocY = -120;
+        // }
+
         
         // keep the dragged position in the data-x/data-y attributes
-        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+        x = (totalLocX) + shiftX;
+        y = (totalLocY) + shiftY;
+
+        console.log("---");
+        // console.log(event.dx, event.dy);
+        // console.log(shiftX, shiftX);s
+        console.log(totalLocX);
+        console.log(shiftX);
+        // console.log(x, y);
+        console.log("---");
 
         // translate the element
         target.style.webkitTransform =

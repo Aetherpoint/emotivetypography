@@ -30,6 +30,12 @@ var slideData = [
 var slideHTMLGroup = [];
 
 
+// <div class='subsection'>
+//           <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
+//           <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
+//         </div>
+
+
 addImageSlides(slideData);
 
 function addImageSlides (slideData) {
@@ -49,7 +55,6 @@ function addImageSlides (slideData) {
         </div>
 
         <div class='subsection subsection-middle'>
-          <div class='pad-container'>
           <div class='pad'>
             <div class='label-vertical'>
               <div class='y1'>Activated</div>
@@ -133,8 +138,7 @@ function addImageSlides (slideData) {
               <div class='line'></div>
             </div>
 
-            <div id='grid-snap' class='marker'></div>
-          </div>
+            <div id='grid-snap' class='marker' data-x='30' data-y='30'></div>
           </div>
         </div>
 

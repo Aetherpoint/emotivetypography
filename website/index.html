@@ -26,6 +26,7 @@
 
     <div id="slide2" class="container preliminary-slide">
       <section class="left">
+        
         <div class="subsection">
           <h1>How are you feeling?</h1>
           <p>Drag the marker closest to what you feel.</p>
@@ -163,10 +164,36 @@
         <div class="subsection dimmed"></div>
       </section>
     </div>
-
   </div>
+
+
+  <form id="test-form">
+    <div>
+      <label>Field 1</label>
+      <input type="text" name="timestamp" placeholder="Field 1"/>
+    </div>
+    <div>
+      <label>Field 2</label>
+      <input type="text" name="user_id" placeholder="Field 1"/>
+    </div>
+    <div>
+      <label>Field 3</label>
+      <input type="text" name="submit_id" placeholder="Field 1"/>
+    </div>
+    <div>
+      <label>Field 4</label>
+      <input type="text" name="model_data" placeholder="Field 1"/>
+    </div>
+
+    <div>
+      <button type="submit" id="submit-form">Submit</button>
+    </div>
+  </form>
+
+
   </body>
 
+  <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/populateslides.js"></script>
 
   <script src="scripts/interact.js"></script>
