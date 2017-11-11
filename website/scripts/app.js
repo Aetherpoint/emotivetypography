@@ -195,6 +195,7 @@ function initPadMarker () {
                 interact.createSnapGrid({
                     x: 30,
                     y: 30,
+                    offset: { x: 15, y: 15 }
                 })
             ],
             relativePoints: [
@@ -205,7 +206,7 @@ function initPadMarker () {
         		// restrictions *don't* pay attention to the action's origin option
             // so using 'parent' for both origin and restrict.restriction works
             restriction: 'parent',
-            elementRect: {top: 0, left: 0, bottom: 1, right: 1}
+            elementRect: {top: 0.5, left: 0.5, bottom: 0.5, right: 0.5}
         },
     })
     .on('dragmove', function (event) {

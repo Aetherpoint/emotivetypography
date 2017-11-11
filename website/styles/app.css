@@ -161,21 +161,12 @@ section.left .button:hover {
 	background-color: #FEFEFE;
 	position: relative;
 }
-/*#grid-snap {
-	height: 3px;
-	width: 3px;
-	margin: -1px 0 0 -1px;
-	z-index: 2000;
-	background-color: red;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-}*/
+
 .marker {
 /*	display: none;*/
 	width: 30px;
 	height: 30px;
-/*	margin: -15px 0 0 -15px; */
+	margin: -15px 0 0 -15px; 
 	background-color: rgba(88,88,88,0.8);
 	border: solid #FEFEFE 3px;
 	border-radius: 100%;
