@@ -88,14 +88,12 @@ function setStorage() {
     }
     else {
 
+      // Otherwise, set up initial the items
       var newUserID = uuidv4();
 
-
-      // Otherwise, set up initial the items
+      // Set up initial items
       setItem("currentSlide", currentSlide);
       setItem("padLocations", padLocations);
-      setItem("userInfo", newUserID);
-
 
       console.log("Registering a new user as " + newUserID);
     }
@@ -107,29 +105,59 @@ setStorage();
 // Update state
 function updateStorageState() {
 
-  // Set up initial items
+  // Update the initial items
   setItem("currentSlide", currentSlide);
   setItem("padLocations", padLocations);
+
+  setItem("survey", 
+  {
+    "userEmotion" : padLocations[0],
+    "model_data_1" : padLocations[1],
+    "model_data_2" : padLocations[2],
+    "model_data_3" : padLocations[3],
+    "model_data_4" : padLocations[4],
+    "model_data_5" : padLocations[5],
+    "model_data_6" : padLocations[6],
+    "model_data_7" : padLocations[7],
+    "model_data_8" : padLocations[8]
+  });
 }
 
 
-
-function primeSubmit() {
-  var prelimSlide = document.getElementsByClassName('button-submit');
+// Before the user goes to the final submission 
+function primeSubmitInfo() {
+  var prelimSlide = document.getElementsByClassName('prep-data');
 
   if (prelimSlide[0]) {
     prelimSlide[0].addEventListener("click", function(event) {
-      submitResults();
+
+      console.log("priming survey");
+
+      document.getElementsByName("time_stamp")[0].value = getTimeStamp();
+      document.getElementsByName("user_id")[0].value = getItem("userID");
+      document.getElementsByName("user_emotion")[0].value = getItem("survey");
+      document.getElementsByName("model_data_1")[0].value = getItem("survey");
+      document.getElementsByName("model_data_2")[0].value = getItem("survey");
+      document.getElementsByName("model_data_3")[0].value = getItem("survey");
+      document.getElementsByName("model_data_4")[0].value = getItem("survey");
+      document.getElementsByName("model_data_5")[0].value = getItem("survey");
+      document.getElementsByName("model_data_6")[0].value = getItem("survey");
+      document.getElementsByName("model_data_7")[0].value = getItem("survey");
+      document.getElementsByName("model_data_8")[0].value = getItem("survey");
     });
   }
 
 }
 
+primeSubmitInfo();
 
-function submitResults() {
 
-  var $form = $('form#test-form');
+function primeSurveySubmission() {
+
+  var $form = $('form#survey-form');
   var url = 'https://script.google.com/macros/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec';
+
+  console.log($form);
 
   $('#submit-form').on('click', function(e) {
 
@@ -144,10 +172,9 @@ function submitResults() {
       data: $form.serializeObject()
     });
   })
-
 }
 
-submitResults();
+primeSurveySubmission();
 
 function getTimeStamp() {
   if (!Date.now) {

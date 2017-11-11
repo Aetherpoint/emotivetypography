@@ -448,10 +448,12 @@ section.right.intro .subsection.dimmed {
 }
 
 
-
 /* Slides */
 .container {
 	display: none;
+}
+button {
+	border: none;
 }
 /*#slide1.container {
 	display: flex;
