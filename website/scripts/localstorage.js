@@ -159,7 +159,7 @@ function primeSurveySubmission() {
 
   console.log($form);
 
-  $('#submit-form').on('click', function(e) {
+  $('#button-submit').on('click', function(e) {
 
     console.log("Submitting form");
 
