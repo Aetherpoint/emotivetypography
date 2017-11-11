@@ -157,7 +157,7 @@ function primeSurveySubmission() {
   var $form = $('form#survey-form');
   var url = 'https://script.google.com/macros/s/AKfycbwtNm_Uckr4DVOuKwKZGuDx7BMEUJ95ijN17TNo1noBGrgolhY/exec';
 
-  console.log($form);
+  // console.log($form);
 
   $('#button-submit').on('click', function(e) {
 
