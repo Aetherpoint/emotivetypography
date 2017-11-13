@@ -109,18 +109,23 @@ function updateStorageState() {
   setItem("currentSlide", currentSlide);
   setItem("padLocations", padLocations);
 
-  setItem("survey", 
-  {
-    "userEmotion" : padLocations[0],
-    "model_data_1" : padLocations[1],
-    "model_data_2" : padLocations[2],
-    "model_data_3" : padLocations[3],
-    "model_data_4" : padLocations[4],
-    "model_data_5" : padLocations[5],
-    "model_data_6" : padLocations[6],
-    "model_data_7" : padLocations[7],
-    "model_data_8" : padLocations[8]
-  });
+  var userObject = {
+      "userEmotion" : padLocations[0],
+      "model_data_1" : padLocations[1],
+      "model_data_2" : padLocations[2],
+      "model_data_3" : padLocations[3],
+      "model_data_4" : padLocations[4],
+      "model_data_5" : padLocations[5],
+      "model_data_6" : padLocations[6],
+      "model_data_7" : padLocations[7],
+      "model_data_8" : padLocations[8]
+  };
+
+  setItem("survey", JSON.stringify(userObject));
+
+  // var retrivedUserObject = localStorage.getItem('survey');
+
+  // console.log(JSON.parse(retrivedUserObject));
 }
 
 
@@ -135,15 +140,26 @@ function primeSubmitInfo() {
 
       document.getElementsByName("time_stamp")[0].value = getTimeStamp();
       document.getElementsByName("user_id")[0].value = getItem("userID");
-      document.getElementsByName("user_emotion")[0].value = getItem("survey");
-      document.getElementsByName("model_data_1")[0].value = getItem("survey");
-      document.getElementsByName("model_data_2")[0].value = getItem("survey");
-      document.getElementsByName("model_data_3")[0].value = getItem("survey");
-      document.getElementsByName("model_data_4")[0].value = getItem("survey");
-      document.getElementsByName("model_data_5")[0].value = getItem("survey");
-      document.getElementsByName("model_data_6")[0].value = getItem("survey");
-      document.getElementsByName("model_data_7")[0].value = getItem("survey");
-      document.getElementsByName("model_data_8")[0].value = getItem("survey");
+
+      var user_emotion = JSON.parse(localStorage.getItem('survey'));
+      var model_data_1 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_2 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_3 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_4 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_5 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_6 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_7 = JSON.parse(localStorage.getItem('survey'));
+      var model_data_8 = JSON.parse(localStorage.getItem('survey'));
+
+      document.getElementsByName("user_emotion")[0].value = JSON.stringify(user_emotion.userEmotion);
+      document.getElementsByName("model_data_1")[0].value = JSON.stringify(model_data_1.model_data_1);
+      document.getElementsByName("model_data_2")[0].value = JSON.stringify(model_data_2.model_data_2);
+      document.getElementsByName("model_data_3")[0].value = JSON.stringify(model_data_3.model_data_3);
+      document.getElementsByName("model_data_4")[0].value = JSON.stringify(model_data_4.model_data_4);
+      document.getElementsByName("model_data_5")[0].value = JSON.stringify(model_data_5.model_data_5);
+      document.getElementsByName("model_data_6")[0].value = JSON.stringify(model_data_6.model_data_6);
+      document.getElementsByName("model_data_7")[0].value = JSON.stringify(model_data_7.model_data_7);
+      document.getElementsByName("model_data_8")[0].value = JSON.stringify(model_data_8.model_data_8);
     });
   }
 

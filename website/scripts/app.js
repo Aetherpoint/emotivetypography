@@ -21,17 +21,13 @@ function populatePadLocations() {
 		
 		// If there's a pad on that slide then add that information.
 		if (slides[i].querySelectorAll('.pad')[0]) {
-			padLocations.push([
-				{
-					"locX" : 0, 
-					"locY" : 0 
-				}
-			]);
+			padLocations.push([0, 0]);
 		}
 	}
 }
 function pushPadLocUpdate(locX, locY) {
-	padLocations[currentSlide] = { "locX" : locX, "locY" : locY };
+	padLocations[currentSlide] = { locX, locY };
+
 
 	// This just stores locations, not values in the matrix, which is what we really need.
 }
@@ -109,7 +105,7 @@ function prepSlides() {
 
 			slides[i].querySelectorAll('.button-left')[0].addEventListener("click", function(event) {
 			    
-			    console.log("Hit Left");
+			    // console.log("Hit Left");
 			    backupSlide();
 			});
 		}
@@ -119,7 +115,7 @@ function prepSlides() {
 
 			slides[i].querySelectorAll('.button-right')[0].addEventListener("click", function(event) {
 			    
-				console.log("Hit Right");
+				// console.log("Hit Right");
 			    advanceSlide();
 			});
 		}
@@ -219,6 +215,8 @@ function initPadMarker () {
         target.style.webkitTransform =
                 target.style.transform =
                 'translate(' + x + 'px,' + y + 'px)';
+
+        pushPadLocUpdate(x, y);
 
         // update the posiion attributes
         target.setAttribute('data-x', x);
