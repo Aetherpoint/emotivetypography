@@ -5,7 +5,7 @@ var sliderComponent = document.getElementById('slide-container');
 var slides = sliderComponent.querySelectorAll("#slide-container > div");
 
 /* Data */
-var currentSlide = 1;
+var currentSlide = 0;
 var padLocations = [];
 var padCoordinates = [];
 
@@ -41,12 +41,12 @@ function pushPadLocUpdate(locX, locY) {
 	// our range of items
 	if ((currentSlide >= surveySlideMin) && (currentSlide <= surveySlideMax)) {
 
-		padLocations[currentSlide] = { locX, locY };
+		padLocations[currentSlide - 1] = { locX, locY };
 
 		var x = padLocToCoordinates(locX);
 		var y = padLocToCoordinates(locY);
 
-		padCoordinates[currentSlide] = { x, y };
+		padCoordinates[currentSlide - 1] = { x, y };
 	}
 	else {
 		// Otherwise slide information would add a 0,0 where there is no information.

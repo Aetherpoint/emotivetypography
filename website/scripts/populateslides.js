@@ -32,7 +32,7 @@ var slideHTMLGroup = [];
 
 // <div class='subsection'>
 //           <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
-//           <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
+//           <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
 //         </div>
 
 
@@ -53,7 +53,7 @@ function addImageSlides (slideData) {
         `<section class='left'>
           <div class='subsection'>
             <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
-            <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
+            <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
           </div>
 
           <div class='subsection subsection-middle'>
@@ -151,7 +151,7 @@ function addImageSlides (slideData) {
         </section>
 
         <section class='right'>
-          <div class='subsection'>
+          <div class='subsection image-test'>
 
           </div>
         </section>
@@ -166,7 +166,7 @@ function addImageSlides (slideData) {
         `<section class='left'>
           <div class='subsection'>
             <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
-            <p>Look at the image on the right. Drag the marker closest to how it makes you feel.</p>
+            <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
           </div>
 
           <div class='subsection subsection-middle'>
@@ -264,7 +264,7 @@ function addImageSlides (slideData) {
         </section>
 
         <section class='right'>
-          <div class='subsection'>
+          <div class='subsection image-test'>
 
           </div>
         </section>

@@ -135,21 +135,20 @@ function primeSubmitInfo() {
 
       document.getElementsByName("time_stamp")[0].value = getTimeStamp();
       document.getElementsByName("user_id")[0].value = getItem("userID");
-
       
-      var padCoordinateItems = JSON.parse(localStorage.getItem('padCoordinates'));
+      // var coords = JSON.parse(localStorage.getItem('padCoordinates'));
 
-      console.log(padCoordinateItems);
+      console.log(padCoordinates);
 
-      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinateItems[0]);
-      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinateItems[1]);
-      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinateItems[2]);
-      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinateItems[3]);
-      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinateItems[4]);
-      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinateItems[5]);
-      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinateItems[6]);
-      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinateItems[7]);
-      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinateItems[8]);
+      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinates[0]);
+      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinates[1]);
+      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinates[2]);
+      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinates[3]);
+      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinates[4]);
+      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinates[5]);
+      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinates[6]);
+      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinates[7]);
+      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinates[8]);
     });
   }
 
