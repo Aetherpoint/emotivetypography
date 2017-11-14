@@ -446,11 +446,11 @@ button {
 
 /* Hide the forms to prevent people from entering info */
 .hidden {
-	pointer-events: none !important;
+/*	pointer-events: none !important;
 	user-select: none !important;
 	opacity: 0 !important;
 	height: 0 !important;
-	width: 0 !important;
+	width: 0 !important;*/
 }
 
 

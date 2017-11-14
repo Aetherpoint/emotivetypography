@@ -123,6 +123,7 @@ function updateStorageState() {
 
 // Before the user goes to the final submission 
 function primeSubmitInfo() {
+
   var prelimSlide = document.getElementsByClassName('prep-data');
 
   if (prelimSlide[0]) {
@@ -133,19 +134,20 @@ function primeSubmitInfo() {
       document.getElementsByName("time_stamp")[0].value = getTimeStamp();
       document.getElementsByName("user_id")[0].value = getItem("userID");
 
-      console.log(localStorage.getItem('padCoordinates'));
+      
+      var padCoordinateItems = JSON.parse(localStorage.getItem('padCoordinates'));
 
-      var padCoordinateItems = localStorage.getItem('padCoordinates');
+      console.log(JSON.stringify(padCoordinateItems[0]));
 
-      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinateItems.userEmotion);
-      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinateItems.model_data_1);
-      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinateItems.model_data_2);
-      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinateItems.model_data_3);
-      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinateItems.model_data_4);
-      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinateItems.model_data_5);
-      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinateItems.model_data_6);
-      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinateItems.model_data_7);
-      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinateItems.model_data_8);
+      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinateItems[0]);
+      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinateItems[1]);
+      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinateItems[2]);
+      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinateItems[3]);
+      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinateItems[4]);
+      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinateItems[5]);
+      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinateItems[6]);
+      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinateItems[7]);
+      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinateItems[8]);
     });
   }
 

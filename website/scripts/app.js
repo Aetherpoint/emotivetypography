@@ -69,22 +69,19 @@ function padLocToCoordinates (axisVal) {
 	return coordinateLocation;
 }
 
-
-function manageSlideState() {
-
-}
-
 function advanceSlide() {
 	currentSlide++;
 	renderSlideUpdate();
 
-	updateStorageState();
+	// updateStorageState();
+	primeSubmitInfo();
 }
 function backupSlide() {
 	currentSlide--;
 	renderSlideUpdate();
 
-	updateStorageState();
+	// updateStorageState();
+	primeSubmitInfo();
 }
 
 
@@ -119,6 +116,7 @@ function renderSlideUpdate() {
 	}
 
 	// updateStorageState();
+
 }
 
 
@@ -245,9 +243,9 @@ function initPadMarker () {
     })
     .on('dragmove', function (event) {
         var target = event.target,
-                // keep the dragged position in the data-x/data-y attributes
-                x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-                y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
         // translate the element
         target.style.webkitTransform =
