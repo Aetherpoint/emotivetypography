@@ -7,6 +7,7 @@ var slides = sliderComponent.querySelectorAll("#slide-container > div");
 /* Data */
 var currentSlide = 1;
 var padLocations = [];
+var padCoordinates = [];
 
 
 /* function */
@@ -21,16 +22,53 @@ function populatePadLocations() {
 		
 		// If there's a pad on that slide then add that information.
 		if (slides[i].querySelectorAll('.pad')[0]) {
-			padLocations.push([0, 0]);
+			padLocations.push({ "x": 0, "y": 0 });
+			padCoordinates.push({ "x": 0, "y": 0 });
 		}
 	}
 }
+
+
 function pushPadLocUpdate(locX, locY) {
 	padLocations[currentSlide] = { locX, locY };
 
+	var x = padLocToCoordinates(locX);
+	var y = padLocToCoordinates(locY);
 
-	// This just stores locations, not values in the matrix, which is what we really need.
+	padCoordinates[currentSlide] = { x, y };
 }
+
+
+// Takes the world locations and boils them down to coordinate spaces
+function padLocToCoordinates (axisVal) {
+	
+	var coordinateLocation = 0;
+
+	const gridSize = 300;
+	const gridDivisionSize = 10;
+
+	var gridBoxUnit = gridSize / gridDivisionSize;
+
+	// Check for 0 values
+	if (axisVal === 0) {
+
+	}
+	else {
+		for (var i = 0; i < gridDivisionSize; i++) {
+
+			// Check locations that match the grid
+			if (axisVal === gridBoxUnit * i) {
+				coordinateLocation = i;
+			}
+			else if (axisVal === ((gridBoxUnit * i) * -1)) {
+				coordinateLocation = i * -1;
+			}
+		}
+	}
+
+	return coordinateLocation;
+}
+
 
 function manageSlideState() {
 

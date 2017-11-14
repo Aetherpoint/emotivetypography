@@ -68,15 +68,6 @@ var user = {
   };
 
 
-var results = [
-  { 
-    "padLocations" : undefined,
-    "submittedTimeStamp" : undefined
-
-  }
-];
-
-
 function setStorage() {
   // Check for local storate
   if (isSupported(storage)) {
@@ -93,7 +84,8 @@ function setStorage() {
 
       // Set up initial items
       setItem("currentSlide", currentSlide);
-      setItem("padLocations", padLocations);
+      setItem("padLocations", JSON.stringify(padLocations));
+      setItem("padCoordinates", JSON.stringify(padCoordinates));
 
       console.log("Registering a new user as " + newUserID);
     }
@@ -107,24 +99,24 @@ function updateStorageState() {
 
   // Update the initial items
   setItem("currentSlide", currentSlide);
-  setItem("padLocations", padLocations);
+  setItem("padLocations", JSON.stringify(padLocations));
+  setItem("padCoordinates", JSON.stringify(padCoordinates));
 
   var userObject = {
-      "userEmotion" : padLocations[0],
-      "model_data_1" : padLocations[1],
-      "model_data_2" : padLocations[2],
-      "model_data_3" : padLocations[3],
-      "model_data_4" : padLocations[4],
-      "model_data_5" : padLocations[5],
-      "model_data_6" : padLocations[6],
-      "model_data_7" : padLocations[7],
-      "model_data_8" : padLocations[8]
+      "userEmotion" : padCoordinates[0],
+      "model_data_1" : padCoordinates[1],
+      "model_data_2" : padCoordinates[2],
+      "model_data_3" : padCoordinates[3],
+      "model_data_4" : padCoordinates[4],
+      "model_data_5" : padCoordinates[5],
+      "model_data_6" : padCoordinates[6],
+      "model_data_7" : padCoordinates[7],
+      "model_data_8" : padCoordinates[8]
   };
 
   setItem("survey", JSON.stringify(userObject));
 
   // var retrivedUserObject = localStorage.getItem('survey');
-
   // console.log(JSON.parse(retrivedUserObject));
 }
 
@@ -136,30 +128,24 @@ function primeSubmitInfo() {
   if (prelimSlide[0]) {
     prelimSlide[0].addEventListener("click", function(event) {
 
-      console.log("priming survey");
+      console.log("Priming results");
 
       document.getElementsByName("time_stamp")[0].value = getTimeStamp();
       document.getElementsByName("user_id")[0].value = getItem("userID");
 
-      var user_emotion = JSON.parse(localStorage.getItem('survey'));
-      var model_data_1 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_2 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_3 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_4 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_5 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_6 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_7 = JSON.parse(localStorage.getItem('survey'));
-      var model_data_8 = JSON.parse(localStorage.getItem('survey'));
+      console.log(localStorage.getItem('padCoordinates'));
 
-      document.getElementsByName("user_emotion")[0].value = JSON.stringify(user_emotion.userEmotion);
-      document.getElementsByName("model_data_1")[0].value = JSON.stringify(model_data_1.model_data_1);
-      document.getElementsByName("model_data_2")[0].value = JSON.stringify(model_data_2.model_data_2);
-      document.getElementsByName("model_data_3")[0].value = JSON.stringify(model_data_3.model_data_3);
-      document.getElementsByName("model_data_4")[0].value = JSON.stringify(model_data_4.model_data_4);
-      document.getElementsByName("model_data_5")[0].value = JSON.stringify(model_data_5.model_data_5);
-      document.getElementsByName("model_data_6")[0].value = JSON.stringify(model_data_6.model_data_6);
-      document.getElementsByName("model_data_7")[0].value = JSON.stringify(model_data_7.model_data_7);
-      document.getElementsByName("model_data_8")[0].value = JSON.stringify(model_data_8.model_data_8);
+      var padCoordinateItems = localStorage.getItem('padCoordinates');
+
+      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinateItems.userEmotion);
+      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinateItems.model_data_1);
+      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinateItems.model_data_2);
+      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinateItems.model_data_3);
+      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinateItems.model_data_4);
+      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinateItems.model_data_5);
+      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinateItems.model_data_6);
+      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinateItems.model_data_7);
+      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinateItems.model_data_8);
     });
   }
 
