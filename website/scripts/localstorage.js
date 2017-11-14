@@ -127,6 +127,8 @@ function primeSubmitInfo() {
   var prelimSlide = document.getElementsByClassName('prep-data');
 
   if (prelimSlide[0] !== undefined) {
+    
+
     prelimSlide[0].addEventListener("click", function(event) {
 
       console.log("Priming results");

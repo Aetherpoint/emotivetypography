@@ -10,6 +10,9 @@ var padLocations = [];
 var padCoordinates = [];
 
 
+var surveySlideMin = 1;
+var surveySlideMax = 9;
+
 /* function */
 function userAlreadySubmitted () {
 
@@ -22,6 +25,9 @@ function populatePadLocations() {
 		
 		// If there's a pad on that slide then add that information.
 		if (slides[i].querySelectorAll('.pad')[0]) {
+
+			// console.log(slides[i].querySelectorAll('.pad')[0]);
+
 			padLocations.push({ "x": 0, "y": 0 });
 			padCoordinates.push({ "x": 0, "y": 0 });
 		}
@@ -30,12 +36,21 @@ function populatePadLocations() {
 
 
 function pushPadLocUpdate(locX, locY) {
-	padLocations[currentSlide] = { locX, locY };
 
-	var x = padLocToCoordinates(locX);
-	var y = padLocToCoordinates(locY);
+	// Make sure the current slide is within
+	// our range of items
+	if ((currentSlide >= surveySlideMin) && (currentSlide <= surveySlideMax)) {
 
-	padCoordinates[currentSlide] = { x, y };
+		padLocations[currentSlide] = { locX, locY };
+
+		var x = padLocToCoordinates(locX);
+		var y = padLocToCoordinates(locY);
+
+		padCoordinates[currentSlide] = { x, y };
+	}
+	else {
+		// Otherwise slide information would add a 0,0 where there is no information.
+	}
 }
 
 
