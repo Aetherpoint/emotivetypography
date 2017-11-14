@@ -62,18 +62,12 @@ function uuidv4() {
 }
 
 
-var user = { 
-    "userID" : 0,
-    "userCompletedSurvey" : false
-  };
-
-
 function setStorage() {
   // Check for local storate
   if (isSupported(storage)) {
 
     // If this is the user's first time
-    if (getItem("userID") === null) {
+    if (getItem("userID") == null) {
         // Otherwise, set up initial the items
         var newUserID = uuidv4();
 
@@ -84,7 +78,7 @@ function setStorage() {
         setItem("padLocations", JSON.stringify(padLocations));
         setItem("padCoordinates", JSON.stringify(padCoordinates));
 
-        // console.log("Registering a new user as " + newUserID);
+        console.log("Registering a new user as " + newUserID);
     }
     else {
       // Otherwise, we don't have to set up any new items
