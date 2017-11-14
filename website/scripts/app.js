@@ -72,16 +72,10 @@ function padLocToCoordinates (axisVal) {
 function advanceSlide() {
 	currentSlide++;
 	renderSlideUpdate();
-
-	// updateStorageState();
-	primeSubmitInfo();
 }
 function backupSlide() {
 	currentSlide--;
 	renderSlideUpdate();
-
-	// updateStorageState();
-	primeSubmitInfo();
 }
 
 

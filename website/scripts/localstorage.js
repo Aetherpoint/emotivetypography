@@ -126,7 +126,7 @@ function primeSubmitInfo() {
 
   var prelimSlide = document.getElementsByClassName('prep-data');
 
-  if (prelimSlide[0]) {
+  if (prelimSlide[0] !== undefined) {
     prelimSlide[0].addEventListener("click", function(event) {
 
       console.log("Priming results");
@@ -137,7 +137,7 @@ function primeSubmitInfo() {
       
       var padCoordinateItems = JSON.parse(localStorage.getItem('padCoordinates'));
 
-      console.log(JSON.stringify(padCoordinateItems[0]));
+      console.log(padCoordinateItems);
 
       document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinateItems[0]);
       document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinateItems[1]);
