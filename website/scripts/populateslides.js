@@ -155,7 +155,7 @@ function addImageSlides (slideData) {
 
           </div>
         </section>
-      </div>`
+      </div>`;
 
       slideHTMLGroup.push(currentHTMLString);
     }
@@ -268,7 +268,7 @@ function addImageSlides (slideData) {
 
           </div>
         </section>
-      </div>`
+      </div>`;
 
       slideHTMLGroup.push(currentHTMLString);
     }

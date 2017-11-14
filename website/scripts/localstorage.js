@@ -72,27 +72,63 @@ function setStorage() {
   // Check for local storate
   if (isSupported(storage)) {
 
-    // If we've already visited and set a unique ID
-    if (getItem("userID").userID !== 0) {
-      // Then we don't have to set any new items.
-      console.log("Pre-existing user is " + getItem("userID"));
+    // If this is the user's first time
+    if (getItem("userID") === null) {
+        // Otherwise, set up initial the items
+        var newUserID = uuidv4();
+
+        setItem("userID", newUserID);
+
+        // Set up initial items
+        setItem("currentSlide", currentSlide);
+        setItem("padLocations", JSON.stringify(padLocations));
+        setItem("padCoordinates", JSON.stringify(padCoordinates));
+
+        // console.log("Registering a new user as " + newUserID);
     }
     else {
-
-      // Otherwise, set up initial the items
-      var newUserID = uuidv4();
-
-      // Set up initial items
-      setItem("currentSlide", currentSlide);
-      setItem("padLocations", JSON.stringify(padLocations));
-      setItem("padCoordinates", JSON.stringify(padCoordinates));
-
-      console.log("Registering a new user as " + newUserID);
+      // Otherwise, we don't have to set up any new items
+      console.log("Pre-existing user is " + getItem("userID"));
     }
+  }
+  else {
+    console.log("Localstorage is not supported");
   }
 }
 
+
+// function testStorage() {
+//   // Check for local storate
+//   if (isSupported(storage)) {
+
+//     // If we've already visited and set a unique ID
+//     if (setItem("userID").userID !== 0) {
+//       // Then we don't have to set any new items.
+//       console.log("Pre-existing user is " + getItem("userID"));
+//     }
+//     else {
+
+//       // Otherwise, set up initial the items
+//       var newUserID = uuidv4();
+
+//       // Set up initial items
+//       setItem("currentSlide", currentSlide);
+//       setItem("padLocations", JSON.stringify(padLocations));
+//       setItem("padCoordinates", JSON.stringify(padCoordinates));
+
+//       console.log("Registering a new user as " + newUserID);
+//     }
+//   }
+//   else {
+//     console.log("Localstorage is not supported");
+//   }
+// }
+
+
+// testStorage();
 setStorage();
+
+
 
 // Update state
 function updateStorageState() {
