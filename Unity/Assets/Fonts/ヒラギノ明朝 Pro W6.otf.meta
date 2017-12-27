@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 68482f9650dd8477c8ea6c706527ce63
+timeCreated: 1511572296
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Mincho Pro
+  fontNames:
+  - Hiragino Mincho Pro
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

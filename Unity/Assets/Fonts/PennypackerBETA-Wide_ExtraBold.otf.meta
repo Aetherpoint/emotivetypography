@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bbb86c454630f43a3a6e206e70b0a5bb
+timeCreated: 1511547795
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PennypackerBETA Wide Extra
+  fontNames:
+  - PennypackerBETA Wide Extra
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

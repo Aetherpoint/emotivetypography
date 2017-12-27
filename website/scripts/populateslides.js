@@ -1,12 +1,6 @@
 
-
+// Data representation for slides
 var slideData = [
-  { 
-    "imageFileName" :  "url"
-  },
-  { 
-    "imageFileName" :  "url"
-  },
   { 
     "imageFileName" :  "url"
   },
@@ -41,7 +35,6 @@ addImageSlides(slideData);
 function addImageSlides (slideData) {
 	var prelimSlide = document.getElementsByClassName('preliminary-slide');
   const slideStartingIndex = 2;
-
 
   for (var i = 0; i <= slideData.length; i++) {
 
@@ -152,7 +145,9 @@ function addImageSlides (slideData) {
 
         <section class='right'>
           <div class='subsection image-test'>
-
+            <video muted autoplay loop>
+              <source src="../movies/` + (indexNum) + `.mp4" type="video/webm">
+            </video>
           </div>
         </section>
       </div>`;
@@ -259,13 +254,15 @@ function addImageSlides (slideData) {
 
           <div class='subsection subsection-nav'>
             <div class='button button-left'>Previous</div>
-            <div class='button button-right prep-data'>Next</div>
+            <div class='button button-right  prep-data'>Next</div>
           </div>
         </section>
 
         <section class='right'>
           <div class='subsection image-test'>
-
+            <video muted autoplay loop>
+              <source src="../movies/` + (indexNum) + `.mp4" type="video/webm">
+            </video>
           </div>
         </section>
       </div>`;

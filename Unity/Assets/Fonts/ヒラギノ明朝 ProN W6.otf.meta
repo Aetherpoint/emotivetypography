@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f062b2a6d647a41658d1d1e20c5b208a
+timeCreated: 1511572298
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Mincho ProN
+  fontNames:
+  - Hiragino Mincho ProN
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

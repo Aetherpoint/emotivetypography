@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: de3bdc068ef3d4534a1d482219141e91
+timeCreated: 1511686503
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT Haptik Trial
+  fontNames:
+  - GT Haptik Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c931280101fd2404a82491167b0fc598, type: 3}
+  - {fileID: 12800000, guid: b374dbc283c0a44df94ca0c0b0c8f36b, type: 3}
+  - {fileID: 12800000, guid: ba8bced62bbe043cd94d3adcaf2c09f3, type: 3}
+  - {fileID: 12800000, guid: c30f8ce7710214024b4e58a0d6f3361b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

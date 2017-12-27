@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 7484033fe6b534b76b8eeaea7248464d
+timeCreated: 1511547795
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: The Pyte Foundry -
+  fontNames:
+  - The Pyte Foundry -
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 56df10bb441614ddf8d4a63d4d2d6074, type: 3}
+  - {fileID: 12800000, guid: 2674507e01c544565a1c18c33e031dc6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

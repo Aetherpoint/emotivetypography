@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 5939b3fd2cf9e4747aa418f4f4c86bfe
+timeCreated: 1511547794
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Euclid Flex Trial
+  fontNames:
+  - Euclid Flex Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 306ab102aa1d94948a961d89d5776e87, type: 3}
+  - {fileID: 12800000, guid: 3377ae227ba6c4afbae0e04e14d86f2a, type: 3}
+  - {fileID: 12800000, guid: 324d68a6b77834d50baa21ebaae00605, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

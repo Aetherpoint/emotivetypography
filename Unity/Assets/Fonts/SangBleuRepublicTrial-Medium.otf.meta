@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1cbd9045b206e41b38ad9f71fd58f092
+timeCreated: 1511547793
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SangBleu Republic Trial
+  fontNames:
+  - SangBleu Republic Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12f0e1cb9278749c7a1014c1a00a7bb1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1a45c1d0ade984305a94d9d146480f17
+timeCreated: 1511547793
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SangBleu Kingdom Trial
+  fontNames:
+  - SangBleu Kingdom Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0d49d6f0dbb534537a540d39e221c96f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

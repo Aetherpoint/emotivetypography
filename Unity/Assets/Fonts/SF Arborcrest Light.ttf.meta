@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 10585e5fcbcb04f38b52b1530e412901
+timeCreated: 1511850504
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Arborcrest Light
+  fontNames:
+  - SF Arborcrest Light
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

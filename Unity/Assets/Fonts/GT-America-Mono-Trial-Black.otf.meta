@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: f6ef18db10c1a451bb6f78d7921bcac2
+timeCreated: 1511686503
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT America Mono Trial
+  fontNames:
+  - GT America Mono Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: eb327bb09364f4e889701e83bce957e6, type: 3}
+  - {fileID: 12800000, guid: 107df101026e848fe9753d766a484471, type: 3}
+  - {fileID: 12800000, guid: a73d613454c38457eb836d20ea83feb1, type: 3}
+  - {fileID: 12800000, guid: 18b7f625a1929447cac5626c246f9f98, type: 3}
+  - {fileID: 12800000, guid: dc77f0c5b91d24554a4635eec2a7125c, type: 3}
+  - {fileID: 12800000, guid: ac23b8c6cf1ab43ed93a6b4e39ee7439, type: 3}
+  - {fileID: 12800000, guid: 690d8cc680d1a43908db4acb1d129815, type: 3}
+  - {fileID: 12800000, guid: 5e9bc217e60114d7188a38172931a729, type: 3}
+  - {fileID: 12800000, guid: 71acacd71a4324195b68b477d8cb1afe, type: 3}
+  - {fileID: 12800000, guid: 2c45fd69a8b3b449e8af19f638d845a7, type: 3}
+  - {fileID: 12800000, guid: c7eed28a7b3ab440d819e11c2425b3e4, type: 3}
+  - {fileID: 12800000, guid: 94b30baade4644a55a7fe9b734f172db, type: 3}
+  - {fileID: 12800000, guid: b170514c831534e7e9319fdb38a681bb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

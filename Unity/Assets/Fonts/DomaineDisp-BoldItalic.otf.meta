@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0a5fed7ff68a648f1b91758dd4eef6a3
+timeCreated: 1511547793
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Domaine Display
+  fontNames:
+  - Domaine Display
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

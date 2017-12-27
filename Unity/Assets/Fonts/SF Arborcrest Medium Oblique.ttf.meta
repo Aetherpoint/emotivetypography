@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7b0bf5659e97346abaa30b3c908df4cd
+timeCreated: 1511850505
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Arborcrest Medium
+  fontNames:
+  - SF Arborcrest Medium
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3b9371f45df38444faffbf96895904cd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

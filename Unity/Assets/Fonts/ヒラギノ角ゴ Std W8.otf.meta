@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bf9e1bd2ad1484ed29fe9d147314a54e
+timeCreated: 1511572297
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Kaku Gothic Std
+  fontNames:
+  - Hiragino Kaku Gothic Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

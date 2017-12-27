@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5bae60499bcd246d6bfcffb64604de28
+timeCreated: 1511686501
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT Eesti Pro Display Trial
+  fontNames:
+  - GT Eesti Pro Display Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 54e3f636708f349849bcccdbae8f24b6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

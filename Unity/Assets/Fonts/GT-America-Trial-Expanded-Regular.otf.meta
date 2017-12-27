@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 33ebe46baa46247bc90184866d425623
+timeCreated: 1511686501
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT America Trial
+  fontNames:
+  - GT America Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1cd2caa09f9ff488d8f1dc078bb2aeaa, type: 3}
+  - {fileID: 12800000, guid: 30c8cda077a694fc3bc70e9cc7a1704e, type: 3}
+  - {fileID: 12800000, guid: 2ce6395184b474ccc8782c1ade4c39c7, type: 3}
+  - {fileID: 12800000, guid: 231321a19534a414f9a2b66887b96f1b, type: 3}
+  - {fileID: 12800000, guid: 293ba5e1aa10d4f04889a355a1d1ead1, type: 3}
+  - {fileID: 12800000, guid: 2c5205423b61b4ad0a6f6d6f86927b25, type: 3}
+  - {fileID: 12800000, guid: 17a9c7f37ecce45f5b263b847f0b01a7, type: 3}
+  - {fileID: 12800000, guid: 22b66067a642642fbab1b295560c7edf, type: 3}
+  - {fileID: 12800000, guid: 128ee4e9502a04189b9a37da84818158, type: 3}
+  - {fileID: 12800000, guid: 2f2fd61b128b4475e8e12e94722ca385, type: 3}
+  - {fileID: 12800000, guid: 316d229c8b36a485e92abe778640a78e, type: 3}
+  - {fileID: 12800000, guid: 055e5f0d3393246faa9b0f06dc3dd2d9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

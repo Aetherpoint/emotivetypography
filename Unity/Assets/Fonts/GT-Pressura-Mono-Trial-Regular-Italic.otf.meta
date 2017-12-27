@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f76c9964b4ad64a278ccf1d6b8c87e16
+timeCreated: 1511686503
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT Pressura Mono Trial
+  fontNames:
+  - GT Pressura Mono Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e1dfdc9b989b6437397e677d5e53eab4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

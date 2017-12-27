@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bf0a4b4663afc4a4cbc92d0d3660e72b
+timeCreated: 1511797823
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lab
+  fontNames:
+  - Lab
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 144ffff5e881549e982835c021522641
+timeCreated: 1511547793
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SangBleu Empire Trial
+  fontNames:
+  - SangBleu Empire Trial
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

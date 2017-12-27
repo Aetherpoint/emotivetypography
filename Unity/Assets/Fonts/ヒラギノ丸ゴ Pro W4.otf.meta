@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 756b5a9e3676c46068de7eaaf09d69c1
+timeCreated: 1511572297
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Maru Gothic Pro
+  fontNames:
+  - Hiragino Maru Gothic Pro
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

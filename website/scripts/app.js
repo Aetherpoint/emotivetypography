@@ -11,12 +11,7 @@ var padCoordinates = [];
 
 
 var surveySlideMin = 1;
-var surveySlideMax = 9;
-
-/* function */
-function userAlreadySubmitted () {
-
-}
+var surveySlideMax = 7;
 
 
 // Make a place to save data for each pad location
@@ -63,7 +58,7 @@ function padLocToCoordinates (axisVal) {
 	const gridDivisionSize = 10;
 
 	var gridBoxUnit = gridSize / gridDivisionSize;
-
+			
 	// Check for 0 values
 	if (axisVal === 0) {
 
@@ -87,10 +82,16 @@ function padLocToCoordinates (axisVal) {
 function advanceSlide() {
 	currentSlide++;
 	renderSlideUpdate();
+
+	// Re init slide marker location?
+	// initPadMarker();
 }
 function backupSlide() {
 	currentSlide--;
 	renderSlideUpdate();
+
+	// Re init slide marker location?
+	// initPadMarker();
 }
 
 
@@ -301,12 +302,12 @@ function debounce(func, wait, immediate) {
 	};
 };
 
-var windowResized = debounce(function() {
-	// initPad();
-	// initPadMarker();
-}, 250);
+// var windowResized = debounce(function() {
+// 	initPad();
+// 	initPadMarker();
+// }, 250);
 
-window.addEventListener('resize', windowResized);
+// window.addEventListener('resize', windowResized);
 
 
 function roundTo(value, decimals) {

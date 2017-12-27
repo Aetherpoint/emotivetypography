@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 2f7d51e7dafb64e0bbac624c39d5b963
+timeCreated: 1511547794
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dia
+  fontNames:
+  - Dia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 177fed04a0d3f47e28591fd3b5796a72, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 35af0907aef914052a5c75fb8556d73c
+timeCreated: 1511547794
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Vulf Mono
+  fontNames:
+  - Vulf Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 267d11243e856470eace720476ebe067, type: 3}
+  - {fileID: 12800000, guid: 251d26e8e4b0043079aeaab9fa8d7933, type: 3}
+  - {fileID: 12800000, guid: 1da7070cce9944d1fa21d706d80aa659, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

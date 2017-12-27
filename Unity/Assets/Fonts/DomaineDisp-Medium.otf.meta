@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 771a3b40a8f654105bcb7e186f5a024a
+timeCreated: 1511547795
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Domaine Display
+  fontNames:
+  - Domaine Display
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6d3e4ed52a29248ccaa57a52b3aebbcf, type: 3}
+  - {fileID: 12800000, guid: 1e94c839d879f47c39869202e58b625b, type: 3}
+  - {fileID: 12800000, guid: 3b8e07ebc6fb84638b543990ae80d79f, type: 3}
+  - {fileID: 12800000, guid: 29cfc03f397174a239df3b5abdccea4b, type: 3}
+  - {fileID: 12800000, guid: 0a5fed7ff68a648f1b91758dd4eef6a3, type: 3}
+  - {fileID: 12800000, guid: 39285a8f06bed450d97d0e68011ee760, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -463,7 +463,7 @@ section.right {
 	background-color: #FEFEFE;
 }
 section.right .subsection {
-	background-color: papayawhip;
+/*	background-color: papayawhip;*/
 	height: 90%;
 	margin: 5%;
 }
@@ -537,14 +537,26 @@ button {
 }
 
 
+.subsection.disclaimer {
+	font-family: "Output Sans";
+	font-size: 0.8rem;
+	line-height: 1.45;
+}
 
 .image-test.subsection {
 	background-size: cover;
 	background-position: 50% 50%;
 	min-height: 30rem;
+	display: flex;
 }
 
-.img-1 .image-test.subsection {
+.image-test.subsection video {
+	max-width: 100%;
+	/*max-height: 46rem;*/
+	flex: 1 100%;
+}
+
+/*.img-1 .image-test.subsection {
 	background-image: url('../images/poster_bg.png');
 }
 .img-2 .image-test.subsection {
@@ -567,4 +579,4 @@ button {
 }
 .img-8 .image-test.subsection {
 	background-image: url('../images/poster_bg.png');
-}
+}*/

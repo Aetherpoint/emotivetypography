@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ab269475e15334868be7461c6185b88c
+timeCreated: 1511572297
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Maru Gothic ProN
+  fontNames:
+  - Hiragino Maru Gothic ProN
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

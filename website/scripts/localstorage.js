@@ -2,10 +2,11 @@
 let inMemoryStorage = {}; 
 
 var storage = window.localStorage;
+var padLocationsToUpdate;
 
 function isSupported(storage) {
   try {
-    const key = "__some_random_key_you_are_not_going_to_use__";
+    const key = "__intiationkey";
     storage.setItem(key, key);
     storage.removeItem(key);
     return true;
@@ -75,8 +76,8 @@ function setStorage() {
 
         // Set up initial items
         setItem("currentSlide", currentSlide);
-        setItem("padLocations", JSON.stringify(padLocations));
-        setItem("padCoordinates", JSON.stringify(padCoordinates));
+        // setItem("padLocations", JSON.stringify(padLocations));
+        // setItem("padCoordinates", JSON.stringify(padCoordinates));
 
         console.log("Registering a new user as " + newUserID);
     }
@@ -129,8 +130,8 @@ function updateStorageState() {
 
   // Update the initial items
   setItem("currentSlide", currentSlide);
-  setItem("padLocations", JSON.stringify(padLocations));
-  setItem("padCoordinates", JSON.stringify(padCoordinates));
+  // setItem("padLocations", JSON.stringify(padLocations));
+  // setItem("padCoordinates", JSON.stringify(padCoordinates));
 
   var userObject = {
       "userEmotion" : padCoordinates[0],
@@ -140,8 +141,8 @@ function updateStorageState() {
       "model_data_4" : padCoordinates[4],
       "model_data_5" : padCoordinates[5],
       "model_data_6" : padCoordinates[6],
-      "model_data_7" : padCoordinates[7],
-      "model_data_8" : padCoordinates[8]
+      // "model_data_7" : padCoordinates[7],
+      // "model_data_8" : padCoordinates[8]
   };
 
   setItem("survey", JSON.stringify(userObject));
@@ -161,24 +162,31 @@ function primeSubmitInfo() {
 
     prelimSlide[0].addEventListener("click", function(event) {
 
-      console.log("Priming results");
+      console.log("Priming results, here are the pad coordinates");
 
       document.getElementsByName("time_stamp")[0].value = getTimeStamp();
       document.getElementsByName("user_id")[0].value = getItem("userID");
       
       // var coords = JSON.parse(localStorage.getItem('padCoordinates'));
 
-      console.log(padCoordinates);
+      // Pad coordinate data to set the values with      
 
-      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padCoordinates[0]);
-      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padCoordinates[1]);
-      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padCoordinates[2]);
-      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padCoordinates[3]);
-      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padCoordinates[4]);
-      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padCoordinates[5]);
-      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padCoordinates[6]);
-      document.getElementsByName("model_data_7")[0].value = JSON.stringify(padCoordinates[7]);
-      document.getElementsByName("model_data_8")[0].value = JSON.stringify(padCoordinates[8]);
+      // Clone the pad locations
+      padLocationsToUpdate = padCoordinates;
+
+      console.log(padLocationsToUpdate);
+
+      // Set the form values to pad coordinates
+      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padLocationsToUpdate[0]);
+
+      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padLocationsToUpdate[1]);
+      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padLocationsToUpdate[2]);
+      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padLocationsToUpdate[3]);
+      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padLocationsToUpdate[4]);
+      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padLocationsToUpdate[5]);
+      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padLocationsToUpdate[6]);
+      // document.getElementsByName("model_data_7")[0].value = JSON.stringify(padLocationsToUpdate[7]);
+      // document.getElementsByName("model_data_8")[0].value = JSON.stringify(padLocationsToUpdate[8]);
     });
   }
 
@@ -210,6 +218,21 @@ function primeSurveySubmission() {
 }
 
 primeSurveySubmission();
+
+
+function timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  return time;
+}
+
 
 function getTimeStamp() {
   if (!Date.now) {

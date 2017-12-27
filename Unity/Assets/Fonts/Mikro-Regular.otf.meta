@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 87650832db17e4207ae3d4855926d48c
+timeCreated: 1511547795
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mikro
+  fontNames:
+  - Mikro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 09e11dc35b5f94bd7bd2cfb413f572c4, type: 3}
+  - {fileID: 12800000, guid: 2566f0c53e0884061994fba891b94185, type: 3}
+  - {fileID: 12800000, guid: 3fc338ea15e68497cb53869206d03988, type: 3}
+  - {fileID: 12800000, guid: 270b2a8f9a4a840a98b03f0e3dbda48a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

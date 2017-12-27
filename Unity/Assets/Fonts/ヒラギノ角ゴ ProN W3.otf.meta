@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 40ce0fe8988f143e980a8994990f1969
+timeCreated: 1511572296
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Kaku Gothic ProN
+  fontNames:
+  - Hiragino Kaku Gothic ProN
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

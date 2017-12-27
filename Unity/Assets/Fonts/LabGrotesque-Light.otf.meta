@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: d89c768d7c70c483e8c822c89720526e
+timeCreated: 1511547796
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lab Grotesque
+  fontNames:
+  - Lab Grotesque
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 112717c1a422145f382ad5853510b6cb, type: 3}
+  - {fileID: 12800000, guid: 9e4abcb2a802848f298341e3a6a4d0aa, type: 3}
+  - {fileID: 12800000, guid: a8f598f4c96864cde8aaba12c133335a, type: 3}
+  - {fileID: 12800000, guid: c87f5ce5d551948c2afd2312d7cdceda, type: 3}
+  - {fileID: 12800000, guid: 002e62b7057dc4f19b78c162d7562f22, type: 3}
+  - {fileID: 12800000, guid: c0a0d2e787b0742b5ad4cfc1ec9145b9, type: 3}
+  - {fileID: 12800000, guid: 4f6645eaecdb84c6b8dd3f5e09f8a90f, type: 3}
+  - {fileID: 12800000, guid: cdd520fb7379c40dea8c0cf29e478996, type: 3}
+  - {fileID: 12800000, guid: 729ee64e2b8c7451ca7a87d56e6aceeb, type: 3}
+  - {fileID: 12800000, guid: 195b7f1fb8d704c77ac1eb82063d0568, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
