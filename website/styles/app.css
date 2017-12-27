@@ -486,7 +486,7 @@ section.right.intro .subsection.dimmed {
 
 /* Slides */
 .container {
-	display: none;
+	/*display: none;*/
 }
 button {
 	border: none;

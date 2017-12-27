@@ -133,7 +133,7 @@ function addImageSlides (slideData) {
                 <div class='line'></div>
               </div>
 
-              <div id='grid-snap' class='marker' data-x='30' data-y='30'></div>
+              <div id='grid-snap-` + i + `' class='marker' data-x='30' data-y='30'></div>
             </div>
           </div>
 
@@ -248,13 +248,13 @@ function addImageSlides (slideData) {
                 <div class='line'></div>
               </div>
 
-              <div id='grid-snap' class='marker' data-x='30' data-y='30'></div>
+              <div id='grid-snap-` + i + `' class='marker' data-x='30' data-y='30'></div>
             </div>
           </div>
 
           <div class='subsection subsection-nav'>
             <div class='button button-left'>Previous</div>
-            <div class='button button-right  prep-data'>Next</div>
+            <div class='button button-right prep-data'>Next</div>
           </div>
         </section>
 

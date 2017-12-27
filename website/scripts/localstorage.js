@@ -194,7 +194,6 @@ function primeSubmitInfo() {
 
 primeSubmitInfo();
 
-
 function primeSurveySubmission() {
 
   var $form = $('form#survey-form');

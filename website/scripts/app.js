@@ -58,7 +58,7 @@ function padLocToCoordinates (axisVal) {
 	const gridDivisionSize = 10;
 
 	var gridBoxUnit = gridSize / gridDivisionSize;
-			
+
 	// Check for 0 values
 	if (axisVal === 0) {
 
@@ -94,17 +94,17 @@ function backupSlide() {
 	// initPadMarker();
 }
 
-
+// TODO: RENABLE THESE!
 function hideSlide(slideElement) {
 
 	// console.log("Hiding " + slideElement);
-	slideElement.style.display = "none";
+	// slideElement.style.display = "none";
 }
 
 function showSlide(slideElement) {
 
 	// console.log("Showing " + slideElement);
-	slideElement.style.display = "flex";
+	// slideElement.style.display = "flex";
 }
 
 // Update the slides
@@ -222,12 +222,22 @@ function dividePadGrid(axis) {
 // 	pushPadLocUpdate(x, y);
 // }
 
-function initPadMarker () {
+function initAllPadMarkers () {
 	// var element = document.getElementById('grid-snap'),
 
-    x = 0, y = 0;
+    for (var i = 0; i < surveySlideMax; i++) {
+    	initPadMarker(i);
+    }
+}
 
-	interact("#grid-snap")
+function initPadMarker(elementIndex) {
+	x = 0, y = 0;
+
+	var currentPad = "#grid-snap-" + elementIndex;
+
+	console.log("Initing " + currentPad);
+
+	interact(currentPad)
     .draggable({
 		// the top left corner of the element will be (0, 0)
 		origin: 'parent',
@@ -259,8 +269,8 @@ function initPadMarker () {
 
         // translate the element
         target.style.webkitTransform =
-                target.style.transform =
-                'translate(' + x + 'px,' + y + 'px)';
+        target.style.transform =
+        'translate(' + x + 'px,' + y + 'px)';
 
         pushPadLocUpdate(x, y);
 
@@ -275,7 +285,7 @@ prepSlides();
 renderSlideUpdate();
 
 initPad();
-initPadMarker();
+initAllPadMarkers();
 // centerPadMarker();
 
 populatePadLocations();
