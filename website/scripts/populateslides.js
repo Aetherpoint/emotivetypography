@@ -23,12 +23,10 @@ var slideData = [
 
 var slideHTMLGroup = [];
 
-
 // <div class='subsection'>
-//           <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
-//           <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
-//         </div>
-
+//  <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
+//  <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
+// </div>
 
 addImageSlides(slideData);
 
@@ -102,38 +100,38 @@ function addImageSlides (slideData) {
                   <div class='y1'><span>Calm</span></div>
                 </div>
               </div>
-              <div class='grid-vertical'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-              </div>
-              <div class='label-horizontal'>
-                <div class='x1'>Unpleasant</div>
-                <div class='x2'>Pleasant</div>
-              </div>
-              <div class='grid-horizontal'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-              </div>
+              <div class="grid-vertical">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="label-horizontal">
+              <div class="x1">Unpleasant</div>
+              <div class="x2">Pleasant</div>
+            </div>
+            <div class="grid-horizontal">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
 
-              <div id='grid-snap-` + i + `' class='marker' data-x='30' data-y='30'></div>
+              <div id='grid-snap-` + i + `' class='marker'></div>
             </div>
           </div>
 
@@ -217,38 +215,38 @@ function addImageSlides (slideData) {
                   <div class='y1'><span>Calm</span></div>
                 </div>
               </div>
-              <div class='grid-vertical'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-              </div>
-              <div class='label-horizontal'>
-                <div class='x1'>Unpleasant</div>
-                <div class='x2'>Pleasant</div>
-              </div>
-              <div class='grid-horizontal'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-              </div>
+              <div class="grid-vertical">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="label-horizontal">
+              <div class="x1">Unpleasant</div>
+              <div class="x2">Pleasant</div>
+            </div>
+            <div class="grid-horizontal">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
 
-              <div id='grid-snap-` + i + `' class='marker' data-x='30' data-y='30'></div>
+              <div id='grid-snap-` + i + `' class='marker'></div>
             </div>
           </div>
 

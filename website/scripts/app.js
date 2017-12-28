@@ -98,13 +98,13 @@ function backupSlide() {
 function hideSlide(slideElement) {
 
 	// console.log("Hiding " + slideElement);
-	// slideElement.style.display = "none";
+	slideElement.style.display = "none";
 }
 
 function showSlide(slideElement) {
 
 	// console.log("Showing " + slideElement);
-	// slideElement.style.display = "flex";
+	slideElement.style.display = "flex";
 }
 
 // Update the slides
@@ -230,6 +230,7 @@ function initAllPadMarkers () {
     }
 }
 
+
 function initPadMarker(elementIndex) {
 	x = 0, y = 0;
 
@@ -284,7 +285,7 @@ function initPadMarker(elementIndex) {
 prepSlides();
 renderSlideUpdate();
 
-initPad();
+// initPad();
 initAllPadMarkers();
 // centerPadMarker();
 
