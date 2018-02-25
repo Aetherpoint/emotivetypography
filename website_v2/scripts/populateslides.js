@@ -30,6 +30,17 @@ var slideHTMLGroup = [];
 
 addImageSlides(slideData);
 
+
+// Shuffle the array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
+
 function addImageSlides (slideData) {
 	var prelimSlide = document.getElementsByClassName('preliminary-slide');
   const slideStartingIndex = 2;
@@ -43,7 +54,6 @@ function addImageSlides (slideData) {
       var currentHTMLString = `<div id='slide` + (indexNum + slideStartingIndex) + `' class='container img-` + (i) + `'>` +
         `<section class='left'>
           <div class='subsection'>
-            <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
             <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
           </div>
 
@@ -136,7 +146,7 @@ function addImageSlides (slideData) {
           </div>
 
           <div class='subsection subsection-nav'>
-            <div class='button button-right'>Submit Answer</div>
+            <div class='button button-right prep-data'>Submit Answer</div>
           </div>
         </section>
 
@@ -158,7 +168,6 @@ function addImageSlides (slideData) {
       var currentHTMLString = `<div id='slide` + (indexNum + slideStartingIndex) + `' class='container img-` + (i) + `'>` +
         `<section class='left'>
           <div class='subsection'>
-            <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>
             <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
           </div>
 
@@ -271,8 +280,7 @@ function addImageSlides (slideData) {
       var currentHTMLString = `<div id='slide` + (indexNum + slideStartingIndex) + `' class='container img-` + (i) + `'>` +
         `<section class='left'>
           <div class='subsection'>
-            <h1>Image ` + (i) + ` of ` + slideData.length + `</h1>` +
-            `<p>Look at the image. Drag the marker closest to how it makes you feel.</p>
+            <p>Look at the image. Drag the marker closest to how it makes you feel.</p>
           </div>
 
           <div class='subsection subsection-middle'>
@@ -376,7 +384,7 @@ function addImageSlides (slideData) {
                 <input type="text" value="1" name="model_data_5"/>
                 <input type="text" value="1" name="model_data_6"/>
               </div>
-              <button id="button-submit" type="submit" class="button button-right">Submit Answer</button>
+              <button id="button-submit" type="submit" class="button button-right prep-data">Submit Answer</button>
             </form>
           </div>
         </section>
@@ -392,10 +400,16 @@ function addImageSlides (slideData) {
 
       slideHTMLGroup.push(currentHTMLString);
     }
-
   }
 
 	if (prelimSlide[0]) {
+
+    // First, shuffle the slide order!
+    shuffleArray(slideHTMLGroup);
+
+    console.log("Slide shuffled");
+    console.log(slideHTMLGroup);
+
 		// Traverse opposite down the list and populate each slide
 		for (var i = slideData.length; i > 0; i--) {
 

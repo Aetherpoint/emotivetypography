@@ -9,7 +9,6 @@ var currentSlide = 0;
 var padLocations = [];
 var padCoordinates = [];
 
-
 var surveySlideMin = 1;
 var surveySlideMax = 7;
 
@@ -109,7 +108,6 @@ function showSlide(slideElement) {
 
 // Update the slides
 function renderSlideUpdate() {
-
 	for (var i = 0; i < slides.length; i++) {
 		
 		// Hide and show the current slide
@@ -124,9 +122,6 @@ function renderSlideUpdate() {
 			// console.log(slides[i]);
 		}
 	}
-
-	// updateStorageState();
-
 }
 
 

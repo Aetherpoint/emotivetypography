@@ -157,38 +157,41 @@ function primeSubmitInfo() {
 
   var prelimSlide = document.getElementsByClassName('prep-data');
 
+  // As long the slides are loaded
   if (prelimSlide[0] !== undefined) {
-    
+  
+    // Assign the event listener to all prelim slides
+    for (var i = 0; i < prelimSlide.length; i++) {
 
-    prelimSlide[0].addEventListener("click", function(event) {
+      prelimSlide[i].addEventListener("click", function(event) {
 
-      console.log("Priming results, here are the pad coordinates");
+        document.getElementsByName("time_stamp")[0].value = getTimeStamp();
+        document.getElementsByName("user_id")[0].value = getItem("userID");
+        
+        // var coords = JSON.parse(localStorage.getItem('padCoordinates'));
+        // Pad coordinate data to set the values with
 
-      document.getElementsByName("time_stamp")[0].value = getTimeStamp();
-      document.getElementsByName("user_id")[0].value = getItem("userID");
-      
-      // var coords = JSON.parse(localStorage.getItem('padCoordinates'));
-      // Pad coordinate data to set the values with
+        // Clone the pad locations
+        padLocationsToUpdate = padCoordinates;
 
-      // Clone the pad locations
-      padLocationsToUpdate = padCoordinates;
+        // Set the form values to pad coordinates
+        document.getElementsByName("user_emotion")[0].value = JSON.stringify(padLocationsToUpdate[0]);
 
-      console.log(padLocationsToUpdate);
+        document.getElementsByName("model_data_1")[0].value = JSON.stringify(padLocationsToUpdate[1]);
+        document.getElementsByName("model_data_2")[0].value = JSON.stringify(padLocationsToUpdate[2]);
+        document.getElementsByName("model_data_3")[0].value = JSON.stringify(padLocationsToUpdate[3]);
+        document.getElementsByName("model_data_4")[0].value = JSON.stringify(padLocationsToUpdate[4]);
+        document.getElementsByName("model_data_5")[0].value = JSON.stringify(padLocationsToUpdate[5]);
+        document.getElementsByName("model_data_6")[0].value = JSON.stringify(padLocationsToUpdate[6]);
+        // document.getElementsByName("model_data_7")[0].value = JSON.stringify(padLocationsToUpdate[7]);
+        // document.getElementsByName("model_data_8")[0].value = JSON.stringify(padLocationsToUpdate[8]);
 
-      // Set the form values to pad coordinates
-      document.getElementsByName("user_emotion")[0].value = JSON.stringify(padLocationsToUpdate[0]);
 
-      document.getElementsByName("model_data_1")[0].value = JSON.stringify(padLocationsToUpdate[1]);
-      document.getElementsByName("model_data_2")[0].value = JSON.stringify(padLocationsToUpdate[2]);
-      document.getElementsByName("model_data_3")[0].value = JSON.stringify(padLocationsToUpdate[3]);
-      document.getElementsByName("model_data_4")[0].value = JSON.stringify(padLocationsToUpdate[4]);
-      document.getElementsByName("model_data_5")[0].value = JSON.stringify(padLocationsToUpdate[5]);
-      document.getElementsByName("model_data_6")[0].value = JSON.stringify(padLocationsToUpdate[6]);
-      // document.getElementsByName("model_data_7")[0].value = JSON.stringify(padLocationsToUpdate[7]);
-      // document.getElementsByName("model_data_8")[0].value = JSON.stringify(padLocationsToUpdate[8]);
-    });
+        console.log("Current pad coordinates:");
+        console.log(padLocationsToUpdate);
+      });
+    }
   }
-
 }
 
 primeSubmitInfo();
